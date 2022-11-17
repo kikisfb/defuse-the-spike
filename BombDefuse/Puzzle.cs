@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinFormsApp1
+namespace BombDefuse
 {
     /// <summary>
     /// PuzzleData ADT to facilitate communication between Main and Puzzle interfaces.
