@@ -46,7 +46,7 @@
             this.TicTacToe.TabIndex = 0;
             this.TicTacToe.Text = "TicTacToe";
             this.TicTacToe.UseVisualStyleBackColor = true;
-            this.TicTacToe.Click += new System.EventHandler(this.button1_Click);
+            this.TicTacToe.Click += new System.EventHandler(this.TicTacToe_Click);
             // 
             // GuessTheFlag
             // 
@@ -56,6 +56,7 @@
             this.GuessTheFlag.TabIndex = 1;
             this.GuessTheFlag.Text = "Guess The Flag";
             this.GuessTheFlag.UseVisualStyleBackColor = true;
+            this.GuessTheFlag.Click += new System.EventHandler(this.GuessTheFlag_Click);
             // 
             // MathGeek
             // 
@@ -65,6 +66,7 @@
             this.MathGeek.TabIndex = 2;
             this.MathGeek.Text = "Math Geek";
             this.MathGeek.UseVisualStyleBackColor = true;
+            this.MathGeek.Click += new System.EventHandler(this.MathGeek_Click);
             // 
             // Scramble
             // 
@@ -74,6 +76,7 @@
             this.Scramble.TabIndex = 3;
             this.Scramble.Text = "Scramble";
             this.Scramble.UseVisualStyleBackColor = true;
+            this.Scramble.Click += new System.EventHandler(this.Scramble_Click);
             // 
             // Switches
             // 
@@ -83,6 +86,7 @@
             this.Switches.TabIndex = 4;
             this.Switches.Text = "Switches";
             this.Switches.UseVisualStyleBackColor = true;
+            this.Switches.Click += new System.EventHandler(this.Switches_Click);
             // 
             // Battleship
             // 
@@ -92,6 +96,7 @@
             this.Battleship.TabIndex = 5;
             this.Battleship.Text = "Battleship";
             this.Battleship.UseVisualStyleBackColor = true;
+            this.Battleship.Click += new System.EventHandler(this.Battleship_Click);
             // 
             // DefeatThePokemon
             // 
@@ -101,6 +106,7 @@
             this.DefeatThePokemon.TabIndex = 6;
             this.DefeatThePokemon.Text = "Defeat the Pokémon";
             this.DefeatThePokemon.UseVisualStyleBackColor = true;
+            this.DefeatThePokemon.Click += new System.EventHandler(this.DefeatThePokemon_Click);
             // 
             // MemoryMatch
             // 
@@ -110,6 +116,7 @@
             this.MemoryMatch.TabIndex = 7;
             this.MemoryMatch.Text = "Memory Match";
             this.MemoryMatch.UseVisualStyleBackColor = true;
+            this.MemoryMatch.Click += new System.EventHandler(this.MemoryMatch_Click);
             // 
             // Form1
             // 
