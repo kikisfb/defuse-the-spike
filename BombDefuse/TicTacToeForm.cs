@@ -16,6 +16,7 @@ namespace BombDefuse
         private int minutes, seconds;
         private Random random;
         private const int MAX_MOVES = 9;
+        private const int MAX_STUCK = 3;
         private List<Button> buttons;
 
         private Key[,] board = { { Key.EMPTY, Key.EMPTY, Key.EMPTY },
@@ -95,35 +96,59 @@ namespace BombDefuse
             return index;
         }
 
-        private bool check(TicStats s)
+        private int check(TicStats s)
         {
+            int check = -1;
             Status status = s.GetStatus();
             if(status == Status.WINNER)
             {
                 Key k = s.GetKey();
                 if(k == Key.PLAYER)
                 {
-                    MessageBox.Show("Congratulations! You have beaten the AI. Click Ok to go back to the main menu.");
-                    closeForm();
-                    return true;
+                    MessageBox.Show("Congratulations! You have beaten the AI. Click OK to go back to the main menu.");
+                    check = 1;
                 }
                 else
                 {
                     MessageBox.Show("Oh no! The AI has beaten you. Click OK to try again.");
-                    reset();
+                    check = 0;
                 }
             }
             else if(status == Status.STUCK)
             {
-                MessageBox.Show("Oops! The game got stuck.");
+                
+                int stuck = tic.stats.GetAmountStuck() + 1;
+                if(stuck == MAX_STUCK)
+                {
+                    MessageBox.Show("The game got stuck for the third time. You win by default! Click OK to go back to the main menu.");
+                    check = 1; 
+                }
+                else
+                {
+                    string stuckStr = stuck == 1 ? "first" : "second";
+                    MessageBox.Show($"The game got stuck for the {stuckStr} time. You will win by default on the third time.");
+                    tic.stats.SetAmountStuck(stuck);
+                    check = 2;
+                }
+            }
+
+            if(check == 1)
+            {
+                tic.data.SetCompletionStatus(true);
+                closeForm();
+            }
+            else if (check != -1)
+            {
                 reset();
             }
 
-            return false;
+            tic.SaveState(board);
+            return check;
         }
 
         private void reset()
         {
+            /* resets the internal TicTacToe grid */
             for(int i = 0; i < 3; i++)
             {
                 for(int j = 0; j < 3; j++)
@@ -132,6 +157,7 @@ namespace BombDefuse
                 }
             }
 
+            /* resets the GUI grid */
             foreach (Button button in buttons)
             {
                 button.ResetText();
@@ -152,7 +178,7 @@ namespace BombDefuse
         private void button_Click(object sender, EventArgs e)
         {
             Button thisButton = (Button)sender;
-            int index = GetIndexFromButton(thisButton) - 2;
+            int index = GetIndexFromButton(thisButton) - 2; // translates button index into array index
 
             if(index == -1)
             {
@@ -165,7 +191,7 @@ namespace BombDefuse
                     thisButton.Text = "X";
                     thisButton.BackColor = Color.LightBlue;
                     thisButton.Enabled = false;
-                    if (check(tic.stats))
+                    if (check(tic.stats) > 0)
                         return;
                     
                     int currRandom;
@@ -178,7 +204,7 @@ namespace BombDefuse
                     buttons[currRandom].BackColor = Color.LightCoral;
                     buttons[currRandom].Enabled = false;
 
-                    if (check(tic.stats))
+                    if (check(tic.stats) > 0)
                         return;
                 }
                 else

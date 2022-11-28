@@ -14,6 +14,7 @@ namespace BombDefuse
         private Status Status;
         private Key Key;
         private int moves;
+        private int amountStuck;
 
         /// <summary>
         /// status member getter.
@@ -42,6 +43,11 @@ namespace BombDefuse
             return moves;
         }
 
+        public int GetAmountStuck()
+        {
+            return amountStuck;
+        }
+
         /// <summary>
         /// status member setter.
         /// </summary>
@@ -67,6 +73,10 @@ namespace BombDefuse
         public void SetMoves(int moves)
         {
             this.moves = moves;
+        }
+        public void SetAmountStuck(int amountStuck)
+        {
+            this.amountStuck = amountStuck;
         }
     }
     public class TicTacToe : Puzzle
