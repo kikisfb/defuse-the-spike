@@ -14,33 +14,50 @@ namespace BombDefuse
     public class DefeatThePokemon : Puzzle
     {
         int correctAnswers;
-        string[] usedPokemon = { "", "", "", "", "", ""};
+        string[] usedPokemon = { " ", " ", " ", " ", " ", " "};
         public DefeatThePokemon()
         {
             correctAnswers = 0;
         }
 
-        public void LoadFromFile()
+        public string LoadFromFile()
         {
+            string fileName = "SaveFile.txt";
+            string[] lines = { " ", " ", " ", " ", " ", " ", " ", " "};
 
+            if (File.Exists(fileName))
+            {
+                lines = File.ReadAllLines(fileName); 
+                for(int i = 0; i < 6; i ++)
+                {
+                    usedPokemon[i] = lines[i];
+                }
+                correctAnswers = int.Parse(lines[7]);
+                return lines[6];
+            }
+            return "";
         }
 
-        public void WriteToFile()
+        public void WriteToFile(PictureBox pictureBox1)
         {
-
+            string fileName = "SaveFile.txt";
+            string imagePath = pictureBox1.ImageLocation;
+            string imageName = imagePath.Substring(imagePath.LastIndexOf('/') + 1);
+            string correctAnswer = Convert.ToString(correctAnswers);
+            File.WriteAllLines(fileName, usedPokemon);
+            File.AppendAllText(fileName, imageName);
+            File.AppendAllText(fileName, $"\n{correctAnswer}");
         }
 
         public bool checkAnswer(PictureBox pictureBox1, string imageName, string fileName)
         {
 
             if (imageName == fileName)
-            {
-                
+            {                
                 return true;
             }
             else
             {
-
                 return false;
             }
 
@@ -61,7 +78,7 @@ namespace BombDefuse
         {
             for(int i = 0; i < usedPokemon.Length; i++)
             {
-                if (usedPokemon[i] == "")
+                if (usedPokemon[i] == " ")
                 {
                     usedPokemon[i] = pokemon;
                     i = usedPokemon.Length;

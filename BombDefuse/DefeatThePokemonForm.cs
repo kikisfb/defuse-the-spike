@@ -33,17 +33,21 @@ namespace BombDefuse
             MessageBox.Show("Defeat the Pokémon is working!");
             pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Charmander.png");
             pictureBox1.ImageLocation = (@"../Pictures/Charmander.png");
+            //string image = dtf.LoadFromFile();
+            //pictureBox1.Image = System.Drawing.Image.FromFile($"../Pictures/{image}");
+            //pictureBox1.ImageLocation = ($"../Pictures/{image}");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //dtf.WriteToFile(pictureBox1);
+            //mainForm.Form1_Load(dtf.data);
             this.Close();
             mainForm.Show();
         }
 
         private void WaterGun_Click(object sender, EventArgs e)
-        {
-            
+        {            
             string imgPath = pictureBox1.ImageLocation;
             string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
             string correctTyping = "Charmander.png";
@@ -144,8 +148,7 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Nice");
                 }
-                dtf.addPokemon(imageName);
-                
+                dtf.addPokemon(imageName);               
             }
             else
             {
