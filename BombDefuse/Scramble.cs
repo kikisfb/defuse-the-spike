@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BombDefuse.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,22 @@ namespace BombDefuse
 
         public Scramble()
         {
-            string[] words = File.ReadAllLines("words.txt");
+            string wordFile = Resources.words;
+
+            string[] words = wordFile.Split("\r\n");
+
             Random random = new Random();
             int numberInArray = random.Next(words.Length);
             pickedWord = words[numberInArray];
-           // if (numberInArray == 0)
-                WinningWords = File.ReadAllLines("TradeWordCombinations.txt");
-           // else if (numberInArray == 1)
-           //     WinningWords = File.ReadAllLines("LeadsWordCombinations.txt");
-           // else
-           //     WinningWords = File.ReadAllLines("TearsWordCombinations.txt");
+            string File;
+          //  if (numberInArray == 0)
+                File = Resources.TradeWordCombinations;
+          //  else if (numberInArray == 1)
+           //     File = Resources.LeadsWordCombinations;
+          //  else
+            //    File = Resources.TearsWordCombinations;
+
+            WinningWords = File.Split("\r\n");
         }
 
         public bool checkGuess(string guess)

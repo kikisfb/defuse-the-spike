@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BombDefuse.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -16,8 +17,10 @@ namespace BombDefuse
 
         public MathGeek()
         {
-            equations = File.ReadAllLines("mathGeekEquations.txt");
-            answers = File.ReadAllLines("mathGeekAnswers.txt");
+            string equationFile = Resources.mathGeekEquations;
+            string answersFile = Resources.mathGeekAnswers;
+            equations = equationFile.Split("\r\n");
+            answers = answersFile.Split("\r\n");
             chooseEquation();
         }
         private void chooseEquation()

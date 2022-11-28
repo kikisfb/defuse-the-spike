@@ -59,5 +59,102 @@ namespace BombDefuse.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DALES
+        ///DEALS
+        ///LADES
+        ///LASED
+        ///LEADS
+        ///SLADE.
+        /// </summary>
+        internal static string LeadsWordCombinations {
+            get {
+                return ResourceManager.GetString("LeadsWordCombinations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 17
+        ///79
+        ///3
+        ///16
+        ///192
+        ///256
+        ///9524
+        ///0
+        ///6
+        ///148.
+        /// </summary>
+        internal static string mathGeekAnswers {
+            get {
+                return ResourceManager.GetString("mathGeekAnswers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5*3*1+4/1-2
+        ///71+56/7
+        ///slove for x  x+2=5
+        ///8/2*(2+2)
+        ///576/3
+        ///8*32
+        ///9524/1
+        ///5*9*74*0*3
+        ///2:3 is the same as 4:?
+        ///half of 296
+        ///.
+        /// </summary>
+        internal static string mathGeekEquations {
+            get {
+                return ResourceManager.GetString("mathGeekEquations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ARETS
+        ///ASTER
+        ///EARST
+        ///RATES
+        ///REAST
+        ///RESAT
+        ///STARE
+        ///STEAR
+        ///STRAE
+        ///TARES
+        ///TASER
+        ///TEARS
+        ///TERAS.
+        /// </summary>
+        internal static string TearsWordCombinations {
+            get {
+                return ResourceManager.GetString("TearsWordCombinations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TRADE
+        ///DATER
+        ///DERAT
+        ///RATED
+        ///TARED
+        ///TREAD.
+        /// </summary>
+        internal static string TradeWordCombinations {
+            get {
+                return ResourceManager.GetString("TradeWordCombinations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TRADE
+        ///LEADS
+        ///TEARS.
+        /// </summary>
+        internal static string words {
+            get {
+                return ResourceManager.GetString("words", resourceCulture);
+            }
+        }
     }
 }
