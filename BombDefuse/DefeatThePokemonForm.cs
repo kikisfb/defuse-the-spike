@@ -61,7 +61,10 @@ namespace BombDefuse
             {
                 MessageBox.Show("Super Effective");
                 dtf++;
-                if(dtf.getCorrectAnswers() == 3)
+                progressBar1.Value += 25;
+                progressBar1.Update();
+                label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
+                if (dtf.getCorrectAnswers() == 4)
                 {
                     MessageBox.Show("Nice");                   
                 }
@@ -88,7 +91,10 @@ namespace BombDefuse
             {
                 MessageBox.Show("Super Effective");
                 dtf++;
-                if (dtf.getCorrectAnswers() == 3)
+                progressBar1.Value += 25;
+                progressBar1.Update();
+                label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
+                if (dtf.getCorrectAnswers() == 4)
                 {
                     MessageBox.Show("Nice");
                 }
@@ -117,7 +123,10 @@ namespace BombDefuse
             {
                 MessageBox.Show("Super Effective");
                 dtf++;
-                if (dtf.getCorrectAnswers() == 3)
+                progressBar1.Value += 25;
+                progressBar1.Update();
+                label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
+                if (dtf.getCorrectAnswers() == 4)
                 {
                     MessageBox.Show("Nice");
                 }
@@ -144,7 +153,10 @@ namespace BombDefuse
             {
                 MessageBox.Show("Super Effective");
                 dtf++;
-                if (dtf.getCorrectAnswers() == 3)
+                progressBar1.Value += 25;
+                progressBar1.Update();
+                label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
+                if (dtf.getCorrectAnswers() == 4)
                 {
                     MessageBox.Show("Nice");
                 }
@@ -164,6 +176,11 @@ namespace BombDefuse
         private void button6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("How To Play\nA Pokemon will be displayed in the center of the screen. \nThere are 4 moves to choose from. \nYou must click the move you think is the most effective against the pokemon shown on screen based on the pokemon types.");
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
