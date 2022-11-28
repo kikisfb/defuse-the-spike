@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BombDefuse.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace BombDefuse
     public partial class DefeatThePokemonForm : Form
     {
         private DefeatThePokemon dtf;
-
+        string currentPokemon;
         public DefeatThePokemonForm()
         {
             InitializeComponent();
@@ -30,17 +31,50 @@ namespace BombDefuse
         }
         private void DefeatThePokemonForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Defeat the Pokémon is working!");
-            pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Charmander.png");
-            pictureBox1.ImageLocation = (@"../Pictures/Charmander.png");
-            //string image = dtf.LoadFromFile();
-            //pictureBox1.Image = System.Drawing.Image.FromFile($"../Pictures/{image}");
-            //pictureBox1.ImageLocation = ($"../Pictures/{image}");
+            MessageBox.Show("Defeat the Pokémon is working!");            
+            string image = dtf.LoadFromFile(progressBar1);
+            label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
+            if (image == "Charmander")
+            {
+                pictureBox1.Image = Resources.Charmander;
+            }
+            else if (image == "Dratini")
+            {
+                pictureBox1.Image = Resources.Dratini;
+            }
+            else if (image == "Riolu")
+            {
+                pictureBox1.Image = Resources.Riolu;
+            }
+            else if (image == "Mudkip")
+            {
+                pictureBox1.Image = Resources.Mudkip;
+            }
+            else if (image == "Geodude")
+            {
+                pictureBox1.Image = Resources.Geodude;
+            }
+            else if (image == "Umbreon")
+            {
+                pictureBox1.Image = Resources.Umbreon;
+            }
+            else
+            {
+                pictureBox1.Image = Resources.Charmander;
+            }
+            if(image != "")
+            {
+                currentPokemon = image;
+            }
+            else
+            {
+                currentPokemon = "Charmander";
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //dtf.WriteToFile(pictureBox1);
+            dtf.WriteToFile(currentPokemon, progressBar1.Value);
             //mainForm.Form1_Load(dtf.data);
             this.Close();
             mainForm.Show();
@@ -48,15 +82,13 @@ namespace BombDefuse
 
         private void WaterGun_Click(object sender, EventArgs e)
         {            
-            string imgPath = pictureBox1.ImageLocation;
-            string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
-            string correctTyping = "Charmander.png";
-            string correctTyping2 = "Geodude.jpg";
+            string correctTyping = "Charmander";
+            string correctTyping2 = "Geodude";
             Random rand = new Random();
             int randomPokemon = rand.Next(0, 6);
 
-            bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
-            bool correct2 = dtf.checkAnswer(pictureBox1, imageName, correctTyping2);
+            bool correct = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping);
+            bool correct2 = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping2);
             if (correct || correct2)
             {
                 MessageBox.Show("Super Effective");
@@ -66,27 +98,28 @@ namespace BombDefuse
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
-                    MessageBox.Show("Nice");                   
+                    MessageBox.Show("Nice");
+                    File.Delete("SaveFile.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
-                dtf.addPokemon(imageName);
+                dtf.addPokemon(currentPokemon);
                 
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
-           dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
+           currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
 
         private void DragonBreath_Click(object sender, EventArgs e)
         {
-            string imgPath = pictureBox1.ImageLocation;
-            string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
-            string correctTyping = "Dratini.png";
+            string correctTyping = "Dratini";
             Random rand = new Random();
             int randomPokemon = rand.Next(0, 6);
 
-            bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
+            bool correct = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping);
             if (correct)
             {
                 MessageBox.Show("Super Effective");
@@ -97,28 +130,29 @@ namespace BombDefuse
                 if (dtf.getCorrectAnswers() == 4)
                 {
                     MessageBox.Show("Nice");
+                    File.Delete("SaveFile.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
-                dtf.addPokemon(imageName);
+                dtf.addPokemon(currentPokemon);
                 
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
-            dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
+            currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
 
         private void Psychic_Click(object sender, EventArgs e)
         {
-            string imgPath = pictureBox1.ImageLocation;
-            string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
-            string correctTyping = "Riolu.png";
-            string correctTyping2 = "Umbreon.jpg";
+            string correctTyping = "Riolu";
+            string correctTyping2 = "Umbreon";
             Random rand = new Random();
             int randomPokemon = rand.Next(0, 6);
 
-            bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
-            bool correct2 = dtf.checkAnswer(pictureBox1, imageName, correctTyping2);
+            bool correct = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping);
+            bool correct2 = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping2);
             if (correct || correct2)
             {
                 MessageBox.Show("Super Effective");
@@ -129,26 +163,27 @@ namespace BombDefuse
                 if (dtf.getCorrectAnswers() == 4)
                 {
                     MessageBox.Show("Nice");
+                    File.Delete("SaveFile.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
-                dtf.addPokemon(imageName);
+                dtf.addPokemon(currentPokemon);
                 
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
-            dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
+            currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
 
         private void GrassKnot_Click(object sender, EventArgs e)
         {
-            string imgPath = pictureBox1.ImageLocation;
-            string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
-            string correctTyping = "Mudkip.jpg";
+            string correctTyping = "Mudkip";
             Random rand = new Random();
             int randomPokemon = rand.Next(0, 6);
 
-            bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
+            bool correct = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping);
             if (correct)
             {
                 MessageBox.Show("Super Effective");
@@ -159,14 +194,17 @@ namespace BombDefuse
                 if (dtf.getCorrectAnswers() == 4)
                 {
                     MessageBox.Show("Nice");
+                    File.Delete("SaveFile.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
-                dtf.addPokemon(imageName);               
+                dtf.addPokemon(currentPokemon);               
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
-            dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
+            currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
 
         private void label1_Click(object sender, EventArgs e)

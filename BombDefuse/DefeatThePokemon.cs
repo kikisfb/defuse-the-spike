@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using BombDefuse.Properties;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -20,10 +21,10 @@ namespace BombDefuse
             correctAnswers = 0;
         }
 
-        public string LoadFromFile()
+        public string LoadFromFile(ProgressBar progressBar1)
         {
             string fileName = "SaveFile.txt";
-            string[] lines = { " ", " ", " ", " ", " ", " ", " ", " "};
+            string[] lines = { " ", " ", " ", " ", " ", " ", " ", " ", " "};
 
             if (File.Exists(fileName))
             {
@@ -33,20 +34,20 @@ namespace BombDefuse
                     usedPokemon[i] = lines[i];
                 }
                 correctAnswers = int.Parse(lines[7]);
+                progressBar1.Value = int.Parse(lines[8]);
                 return lines[6];
             }
             return "";
         }
 
-        public void WriteToFile(PictureBox pictureBox1)
+        public void WriteToFile(string currentPokemon, int progress)
         {
-            string fileName = "SaveFile.txt";
-            string imagePath = pictureBox1.ImageLocation;
-            string imageName = imagePath.Substring(imagePath.LastIndexOf('/') + 1);
+            string fileName = "SaveFile.txt";            
             string correctAnswer = Convert.ToString(correctAnswers);
             File.WriteAllLines(fileName, usedPokemon);
-            File.AppendAllText(fileName, imageName);
+            File.AppendAllText(fileName, currentPokemon);
             File.AppendAllText(fileName, $"\n{correctAnswer}");
+            File.AppendAllText(fileName, $"\n{progress}");
         }
 
         public bool checkAnswer(PictureBox pictureBox1, string imageName, string fileName)
@@ -92,7 +93,7 @@ namespace BombDefuse
             return dtf;
         }
 
-        public void checkUsedPokemon(string newImage, PictureBox pictureBox1, int randomPokemon)
+        public string checkUsedPokemon(string newImage, PictureBox pictureBox1, int randomPokemon)
         {
             Random rand = new Random();
             bool check = true;
@@ -102,7 +103,7 @@ namespace BombDefuse
                 switch (randomPokemon)
                 {                    
                     case 0:
-                        newImage = "Charmander.png";
+                        newImage = "Charmander";
                         for (int i = 0; i < usedPokemon.Length; i++)
                         {
                             if (newImage != usedPokemon[i])
@@ -110,15 +111,14 @@ namespace BombDefuse
                                 check1++;
                                 if(check1 == 6)
                                 {
-                                    pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Charmander.png");
-                                    pictureBox1.ImageLocation = (@"../Pictures/Charmander.png");
+                                    pictureBox1.Image = Resources.Charmander;  
                                     check = false;
                                 }
                             }
                         }
                         break;
                     case 1:
-                        newImage = "Dratini.png";
+                        newImage = "Dratini";
                         for (int i = 0; i < usedPokemon.Length; i++)
                         {
                             if (newImage != usedPokemon[i])
@@ -126,15 +126,14 @@ namespace BombDefuse
                                 check1++;
                                 if (check1 == 6)
                                 {
-                                    pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Dratini.png");
-                                    pictureBox1.ImageLocation = (@"../Pictures/Dratini.png");
+                                    pictureBox1.Image = Resources.Dratini;
                                     check = false;
                                 }
                             }
                         }
                         break;
                     case 2:
-                        newImage = "Riolu.png";
+                        newImage = "Riolu";
                         for (int i = 0; i < usedPokemon.Length; i++)
                         {
                             if (newImage != usedPokemon[i])
@@ -142,15 +141,14 @@ namespace BombDefuse
                                 check1++;
                                 if (check1 == 6)
                                 {
-                                    pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Riolu.png");
-                                    pictureBox1.ImageLocation = (@"../Pictures/Riolu.png");
+                                    pictureBox1.Image = Resources.Riolu;
                                     check = false;
                                 }
                             }
                         }
                         break;
                     case 3:
-                        newImage = "Mudkip.jpg";
+                        newImage = "Mudkip";
                         for (int i = 0; i < usedPokemon.Length; i++)
                         {
                             if (newImage != usedPokemon[i])
@@ -158,8 +156,7 @@ namespace BombDefuse
                                 check1++;
                                 if (check1 == 6)
                                 {
-                                    pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Mudkip.jpg");
-                                    pictureBox1.ImageLocation = (@"../Pictures/Mudkip.jpg");
+                                    pictureBox1.Image = Resources.Mudkip;
                                     check = false;
                                     
                                 }
@@ -167,7 +164,7 @@ namespace BombDefuse
                         }
                         break;
                     case 4:
-                        newImage = "Geodude.jpg";
+                        newImage = "Geodude";
                         for (int i = 0; i < usedPokemon.Length; i++)
                         {
                             if (newImage != usedPokemon[i])
@@ -175,8 +172,7 @@ namespace BombDefuse
                                 check1++;
                                 if (check1 == 6)
                                 {
-                                    pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Geodude.jpg");
-                                    pictureBox1.ImageLocation = (@"../Pictures/Geodude.jpg");
+                                    pictureBox1.Image = Resources.Geodude;
                                     check = false;
                                     
                                 }
@@ -184,7 +180,7 @@ namespace BombDefuse
                         }
                         break;
                     case 5:
-                        newImage = "Umbreon.jpg";
+                        newImage = "Umbreon";
                         for (int i = 0; i < usedPokemon.Length; i++)
                         {
                             if (newImage != usedPokemon[i])
@@ -192,8 +188,7 @@ namespace BombDefuse
                                 check1++;
                                 if (check1 == 6)
                                 {
-                                    pictureBox1.Image = System.Drawing.Image.FromFile(@"../Pictures/Umbreon.jpg");
-                                    pictureBox1.ImageLocation = (@"../Pictures/Umbreon.jpg");
+                                    pictureBox1.Image = Resources.Umbreon;
                                     check = false;
                                    
                                 }
@@ -204,6 +199,7 @@ namespace BombDefuse
                 check1 = 0;
                 randomPokemon = rand.Next(0, 6);
             }
+            return newImage;
         }
     }
 }
