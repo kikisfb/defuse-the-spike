@@ -17,8 +17,8 @@ namespace BombDefuse
             InitializeComponent();
         }
 
-        private Form? mainForm;
-        public GuessTheFlagForm(Form callingForm)
+        private Form1? mainForm;
+        public GuessTheFlagForm(Form1 callingForm)
         {
             this.mainForm = callingForm;
 
