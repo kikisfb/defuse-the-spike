@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,13 +41,73 @@ namespace BombDefuse
             buttons = list;
         }
 
+        private void ChangeButton(Button button, string text, Color color, bool enabled)
+        {
+            button.Text = text;
+            button.BackColor = color;
+            button.Enabled = enabled;
+        }
+        private void LoadKeysIntoGUI(Key[,] board)
+        {
+            for (int i = 0, counter = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++, counter++)
+                {
+                    if (board[i, j] == Key.PLAYER)
+                    {
+                        ChangeButton(buttons[counter], "X", Color.LightBlue, false);
+                    }
+                    else if (board[i, j] == Key.AI)
+                    {
+                        ChangeButton(buttons[counter], "O", Color.LightCoral, false);
+                    }
+                }
+            }
+        }
+
+        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
+        {
+            string displaySeconds;
+            string displayMinutes;
+
+            // converts minutes and seconds to a user-friendly format
+            if (seconds < 10)
+            {
+                displaySeconds = $"{0}{seconds}";
+            }
+            else
+                displaySeconds = $"{seconds}";
+
+            if (minutes < 10)
+            {
+                displayMinutes = $"{0}{minutes}";
+            }
+            else
+            {
+                displayMinutes = $"{minutes}";
+            }
+
+            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
+        }
+
         private void TicTacToeForm_Load(object sender, EventArgs e)
         {
+            /* Set initial data of the sub-GUI */
             label1.Text = "Player versus. AI\nTicTacToe";
-            minutes = 0;
-            seconds = 0;
             timer1.Start();
             label2.Text = "00 minutes : 00 seconds elapsed";
+
+            /* Read past state if existing */
+            tic.ReadState(board);
+
+            minutes = tic.data.GetMinutes();
+            seconds = tic.data.GetSeconds();
+            if(minutes > 0 || seconds > 0)
+            {
+                label2.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            }
+
+            LoadKeysIntoGUI(board);
         }
 
         private int GetIndexFromButton(Button thisButton)
@@ -121,7 +183,8 @@ namespace BombDefuse
                 if(stuck == MAX_STUCK)
                 {
                     MessageBox.Show("The game got stuck for the third time. You win by default! Click OK to go back to the main menu.");
-                    check = 1; 
+                    check = 1;
+                    tic.stats.SetStatus(Status.WINNER);
                 }
                 else
                 {
@@ -135,14 +198,20 @@ namespace BombDefuse
             if(check == 1)
             {
                 tic.data.SetCompletionStatus(true);
+                File.Delete("ticState.txt");
+                File.Delete("ticKeys.txt");
                 closeForm();
             }
-            else if (check != -1)
+            else
             {
-                reset();
+                if (check != -1)
+                    reset();
+
+                tic.data.SetMinutes(minutes);
+                tic.data.SetSeconds(seconds);
+                tic.SaveState(board);
             }
 
-            tic.SaveState(board);
             return check;
         }
 
@@ -180,17 +249,18 @@ namespace BombDefuse
             Button thisButton = (Button)sender;
             int index = GetIndexFromButton(thisButton) - 2; // translates button index into array index
 
-            if(index == -1)
+            if(index == -1) // go back button clicked
             {
+                tic.data.SetMinutes(minutes);
+                tic.data.SetSeconds(seconds);
+                tic.SaveState(board);
                 closeForm();
             }
             else
             {
                 if (tic.PlayerMove(board, index, Key.PLAYER))
                 {
-                    thisButton.Text = "X";
-                    thisButton.BackColor = Color.LightBlue;
-                    thisButton.Enabled = false;
+                    ChangeButton(thisButton, "X", Color.LightBlue, false);
                     if (check(tic.stats) > 0)
                         return;
                     
@@ -200,9 +270,7 @@ namespace BombDefuse
                     {
                         currRandom = random.Next(0, MAX_MOVES);
                     } while (!tic.PlayerMove(board, currRandom, Key.AI));
-                    buttons[currRandom].Text = "O";
-                    buttons[currRandom].BackColor = Color.LightCoral;
-                    buttons[currRandom].Enabled = false;
+                    ChangeButton(buttons[currRandom], "O", Color.LightCoral, false);
 
                     if (check(tic.stats) > 0)
                         return;
@@ -214,9 +282,6 @@ namespace BombDefuse
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            string displayMinutes;
-            string displaySeconds;
-
             if(seconds < 60)
             {
                 seconds++;
@@ -227,23 +292,9 @@ namespace BombDefuse
                 minutes++;
             }
 
-            if (seconds < 10)
-            {
-                displaySeconds = $"{0}{seconds}";
-            }
-            else
-                displaySeconds = $"{seconds}";
+            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
 
-            if(minutes < 10)
-            {
-                displayMinutes = $"{0}{minutes}";
-            }
-            else
-            {
-                displayMinutes = $"{minutes}";
-            }
-
-            label2.Text = $"{displayMinutes} minutes : {displaySeconds} seconds elapsed";
+            label2.Text = minutesSecondsStr;
         }
     }
 }

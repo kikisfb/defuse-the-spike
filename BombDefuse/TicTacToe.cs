@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 // Initial branch development
 namespace BombDefuse
@@ -182,7 +183,30 @@ namespace BombDefuse
         /// <param name="board">the 2D grid being used in the game.</param>
         public void SaveState(Key[,] board)
         {
-            
+            /* writes the current status of the game */
+            string[] state = {
+                data.GetMinutes().ToString(),
+                data.GetSeconds().ToString(),
+                stats.GetAmountStuck().ToString(),
+                stats.GetKey().ToString(),
+                stats.GetMoves().ToString(),
+                stats.GetStatus().ToString()
+            };
+
+            File.WriteAllLines("ticState.txt", state);
+
+            /* saves the grid of the game */
+            List<string> keys = new();
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    keys.Add(board[i, j].ToString());
+                }
+            }
+
+            File.WriteAllLines("ticKeys.txt", keys);
         }
 
         /// <summary>
@@ -191,7 +215,33 @@ namespace BombDefuse
         /// <param name="board">the 2D grid that will be loaded from a file.</param>
         public void ReadState(Key[,] board)
         {
-            
+            string statePath = "ticState.txt";
+            string keysPath = "ticKeys.txt";
+
+            if(File.Exists(statePath))
+            {
+                string[] state = File.ReadAllLines(statePath);
+
+                data.SetMinutes(Int32.Parse(state[0]));
+                data.SetSeconds(Int32.Parse(state[1]));
+                stats.SetAmountStuck(Int32.Parse(state[2]));
+                stats.SetKey(Enum.Parse<Key>(state[3]));
+                stats.SetMoves(Int32.Parse(state[4]));
+                stats.SetStatus(Enum.Parse<Status>(state[5]));
+            }
+
+            if(File.Exists(keysPath))
+            {
+                string[] keys = File.ReadAllLines(keysPath);
+
+                for (int i = 0, counter = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++, counter++)
+                    {
+                        board[i, j] = Enum.Parse<Key>(keys[counter]);
+                    }
+                }
+            }
         }
     }
 }
