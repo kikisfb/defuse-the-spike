@@ -23,8 +23,8 @@ namespace BombDefuse
                  { Key.EMPTY, Key.EMPTY, Key.EMPTY }
                };
 
-        private Form? mainForm;
-        public TicTacToeForm(Form callingForm)
+        private Form1? mainForm;
+        public TicTacToeForm(Form1 callingForm)
         {
             this.mainForm = callingForm;
 

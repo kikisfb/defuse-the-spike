@@ -14,6 +14,8 @@ namespace BombDefuse
         private int id = -1;
         private bool completionStatus = false;
         private bool activityStatus = false;
+        private int minutes = 0;
+        private int seconds = 0;
 
         /// <summary>
         /// Default PuzzleData constructor
@@ -71,6 +73,26 @@ namespace BombDefuse
         public bool GetActivityStatus()
         {
             return activityStatus;
+        }
+
+        public int GetMinutes()
+        {
+            return minutes;
+        }
+
+        public int GetSeconds()
+        {
+            return seconds;
+        }
+
+        public void SetMinutes(int minutes)
+        {
+            this.minutes = minutes;
+        }
+
+        public void SetSeconds(int seconds)
+        {
+            this.seconds = seconds;
         }
     }
     public abstract class Puzzle
