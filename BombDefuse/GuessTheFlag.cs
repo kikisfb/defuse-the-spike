@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BombDefuse.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -72,26 +73,23 @@ namespace BombDefuse
         /// <param name="random">pseudo-random number generator.</param>
         public void NextFlag(Random random)
         {
-            string filePath = "gflFlags.txt";
+            string file = Resources.gflFlags;
             bool found = false;
             int index;
 
             if (flagsUsed.Count == 10)
                 flagsUsed.Clear();
 
-            if(File.Exists(filePath))
+            string[] flags = file.Split("\r\n");
+            while (!found)
             {
-                string[] flags = File.ReadAllLines(filePath);
-                while (!found)
+                index = random.Next(0, flags.Length);
+                if (!flagsUsed.Contains(flags[index]))
                 {
-                    index = random.Next(0, flags.Length);
-                    if (!flagsUsed.Contains(flags[index]))
-                    {
-                        currentFlag = flags[index];
-                        found = true;
-                    }
+                    currentFlag = flags[index];
+                    found = true;
                 }
-            }  
+            }
         }
 
         /// <summary>

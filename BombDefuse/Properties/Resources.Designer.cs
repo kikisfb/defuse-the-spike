@@ -131,6 +131,24 @@ namespace BombDefuse.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to australia
+        ///brazil
+        ///canada
+        ///china
+        ///france
+        ///germany
+        ///iran
+        ///japan
+        ///mexico
+        ///poland.
+        /// </summary>
+        internal static string gflFlags {
+            get {
+                return ResourceManager.GetString("gflFlags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap iran {
