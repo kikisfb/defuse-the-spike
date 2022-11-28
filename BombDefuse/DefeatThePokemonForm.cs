@@ -48,8 +48,8 @@ namespace BombDefuse
             string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
             string correctTyping = "Charmander.png";
             string correctTyping2 = "Geodude.jpg";
-            //dtf.checkUsedPokemon(imageName, pictureBox1);
-
+            Random rand = new Random();
+            int randomPokemon = rand.Next(0, 6);
 
             bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
             bool correct2 = dtf.checkAnswer(pictureBox1, imageName, correctTyping2);
@@ -62,13 +62,13 @@ namespace BombDefuse
                     MessageBox.Show("Nice");                   
                 }
                 dtf.addPokemon(imageName);
-                dtf.checkUsedPokemon(imageName, pictureBox1);
+                
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
-           
+           dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
         }
 
         private void DragonBreath_Click(object sender, EventArgs e)
@@ -76,7 +76,8 @@ namespace BombDefuse
             string imgPath = pictureBox1.ImageLocation;
             string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
             string correctTyping = "Dratini.png";
-           // dtf.checkUsedPokemon(imageName, pictureBox1);
+            Random rand = new Random();
+            int randomPokemon = rand.Next(0, 6);
 
             bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
             if (correct)
@@ -88,12 +89,13 @@ namespace BombDefuse
                     MessageBox.Show("Nice");
                 }
                 dtf.addPokemon(imageName);
-                dtf.checkUsedPokemon(imageName, pictureBox1);
+                
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
+            dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
         }
 
         private void Psychic_Click(object sender, EventArgs e)
@@ -102,8 +104,8 @@ namespace BombDefuse
             string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
             string correctTyping = "Riolu.png";
             string correctTyping2 = "Umbreon.jpg";
-           // dtf.checkUsedPokemon(imageName, pictureBox1);
-
+            Random rand = new Random();
+            int randomPokemon = rand.Next(0, 6);
 
             bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
             bool correct2 = dtf.checkAnswer(pictureBox1, imageName, correctTyping2);
@@ -116,12 +118,13 @@ namespace BombDefuse
                     MessageBox.Show("Nice");
                 }
                 dtf.addPokemon(imageName);
-                dtf.checkUsedPokemon(imageName, pictureBox1);
+                
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
+            dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
         }
 
         private void GrassKnot_Click(object sender, EventArgs e)
@@ -129,7 +132,8 @@ namespace BombDefuse
             string imgPath = pictureBox1.ImageLocation;
             string imageName = imgPath.Substring(imgPath.LastIndexOf('/') + 1);
             string correctTyping = "Mudkip.jpg";
-           // dtf.checkUsedPokemon(imageName, pictureBox1);
+            Random rand = new Random();
+            int randomPokemon = rand.Next(0, 6);
 
             bool correct = dtf.checkAnswer(pictureBox1, imageName, correctTyping);
             if (correct)
@@ -141,23 +145,22 @@ namespace BombDefuse
                     MessageBox.Show("Nice");
                 }
                 dtf.addPokemon(imageName);
-                dtf.checkUsedPokemon(imageName, pictureBox1);
+                
             }
             else
             {
                 MessageBox.Show("Incorrect");
             }
+            dtf.checkUsedPokemon(imageName, pictureBox1, randomPokemon);
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
-            string used;
-            for(int i = 0; i < dtf.usedPokemonSize(); i++)
-            {
-                used = dtf.printTestPokemon(i);
-                MessageBox.Show(used);
-            }
-            
+            MessageBox.Show("How To Play\nA Pokemon will be displayed in the center of the screen. \nThere are 4 moves to choose from. \nYou must click the move you think is the most effective against the pokemon shown on screen based on the pokemon types.");
         }
     }
 }

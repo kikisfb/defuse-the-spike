@@ -36,6 +36,7 @@
             this.GrassKnot = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.HowToPlay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             // WaterGun
             // 
             this.WaterGun.BackColor = System.Drawing.Color.Blue;
+            this.WaterGun.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WaterGun.Location = new System.Drawing.Point(10, 338);
             this.WaterGun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WaterGun.Name = "WaterGun";
@@ -65,6 +67,7 @@
             // DragonBreath
             // 
             this.DragonBreath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DragonBreath.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DragonBreath.Location = new System.Drawing.Point(272, 338);
             this.DragonBreath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DragonBreath.Name = "DragonBreath";
@@ -77,6 +80,7 @@
             // Psychic
             // 
             this.Psychic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Psychic.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Psychic.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.Psychic.Location = new System.Drawing.Point(544, 338);
             this.Psychic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -90,6 +94,7 @@
             // GrassKnot
             // 
             this.GrassKnot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.GrassKnot.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.GrassKnot.Location = new System.Drawing.Point(799, 338);
             this.GrassKnot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GrassKnot.Name = "GrassKnot";
@@ -122,11 +127,23 @@
             this.label1.Text = "Defeat The Pokemon";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // HowToPlay
+            // 
+            this.HowToPlay.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HowToPlay.Location = new System.Drawing.Point(847, 42);
+            this.HowToPlay.Name = "HowToPlay";
+            this.HowToPlay.Size = new System.Drawing.Size(122, 76);
+            this.HowToPlay.TabIndex = 8;
+            this.HowToPlay.Text = "How To Play";
+            this.HowToPlay.UseVisualStyleBackColor = true;
+            this.HowToPlay.Click += new System.EventHandler(this.button6_Click);
+            // 
             // DefeatThePokemonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 459);
+            this.Controls.Add(this.HowToPlay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.GrassKnot);
@@ -157,5 +174,6 @@
         private Button DragonBreath;
         private Button Psychic;
         private Button GrassKnot;
+        private Button HowToPlay;
     }
 }

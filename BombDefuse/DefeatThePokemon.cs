@@ -69,31 +69,15 @@ namespace BombDefuse
             }
         }
 
-        public string[] getUsedPokemon()
-        {
-            return usedPokemon;
-        }
-
-        public int usedPokemonSize()
-        {
-            return usedPokemon.Length;
-        }
-
-        public string printTestPokemon(int i)
-        {
-            return usedPokemon[i];
-        }
-
         public static DefeatThePokemon operator ++(DefeatThePokemon dtf)
         {
             dtf.correctAnswers++;
             return dtf;
         }
 
-        public void checkUsedPokemon(string newImage, PictureBox pictureBox1)
+        public void checkUsedPokemon(string newImage, PictureBox pictureBox1, int randomPokemon)
         {
             Random rand = new Random();
-            int randomPokemon = rand.Next(0, 6);
             bool check = true;
             int check1 = 0;
             while (check)
