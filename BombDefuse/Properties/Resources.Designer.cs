@@ -73,16 +73,6 @@ namespace BombDefuse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5647_tohruhug {
-            get {
-                object obj = ResourceManager.GetObject("5647-tohruhug", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap tic_tac_toe_seamless_background_on_dark_blue_illustration_vector {
             get {
                 object obj = ResourceManager.GetObject("tic-tac-toe-seamless-background-on-dark-blue-illustration-vector", resourceCulture);
