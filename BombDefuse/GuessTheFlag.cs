@@ -76,6 +76,9 @@ namespace BombDefuse
             bool found = false;
             int index;
 
+            if (flagsUsed.Count == 10)
+                flagsUsed.Clear();
+
             if(File.Exists(filePath))
             {
                 string[] flags = File.ReadAllLines(filePath);
@@ -85,6 +88,7 @@ namespace BombDefuse
                     if (!flagsUsed.Contains(flags[index]))
                     {
                         currentFlag = flags[index];
+                        found = true;
                     }
                 }
             }  
