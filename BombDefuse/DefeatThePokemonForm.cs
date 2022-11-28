@@ -15,13 +15,14 @@ namespace BombDefuse
     {
         private DefeatThePokemon dtf;
         string currentPokemon;
+        private int minutes, seconds;
         public DefeatThePokemonForm()
         {
             InitializeComponent();
         }
 
-        private Form? mainForm;
-        public DefeatThePokemonForm(Form callingForm)
+        private Form1? mainForm;
+        public DefeatThePokemonForm(Form1 callingForm)
         {
             this.mainForm = callingForm;
 
@@ -31,8 +32,15 @@ namespace BombDefuse
         }
         private void DefeatThePokemonForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Defeat the Pokémon is working!");            
+            MessageBox.Show("Defeat the Pokémon is working!");
+            minutes = 0;
+            seconds = 0;
+            timer1.Start();
+            
             string image = dtf.LoadFromFile(progressBar1);
+            minutes = dtf.data.GetMinutes();
+            seconds = dtf.data.GetSeconds();
+            label3.Text = ConvertMinutesSecondsToStr(minutes, seconds);
             label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
             if (image == "Charmander")
             {
@@ -74,6 +82,8 @@ namespace BombDefuse
 
         private void button5_Click(object sender, EventArgs e)
         {
+            dtf.data.SetMinutes(minutes);
+            dtf.data.SetSeconds(seconds);
             dtf.WriteToFile(currentPokemon, progressBar1.Value);
             //mainForm.Form1_Load(dtf.data);
             this.Close();
@@ -220,5 +230,48 @@ namespace BombDefuse
         {
 
         }
+
+        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
+        {
+            string displaySeconds;
+            string displayMinutes;
+
+            // converts minutes and seconds to a user-friendly format
+            if (seconds < 10)
+            {
+                displaySeconds = $"{0}{seconds}";
+            }
+            else
+                displaySeconds = $"{seconds}";
+
+            if (minutes < 10)
+            {
+                displayMinutes = $"{0}{minutes}";
+            }
+            else
+            {
+                displayMinutes = $"{minutes}";
+            }
+
+            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (seconds < 60)
+            {
+                seconds++;
+            }
+            else
+            {
+                seconds = 0;
+                minutes++;
+            }
+
+            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
+
+            label3.Text = minutesSecondsStr;
+        }
     }
 }
+

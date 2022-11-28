@@ -24,7 +24,7 @@ namespace BombDefuse
         public string LoadFromFile(ProgressBar progressBar1)
         {
             string fileName = "SaveFile.txt";
-            string[] lines = { " ", " ", " ", " ", " ", " ", " ", " ", " "};
+            string[] lines = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "};
 
             if (File.Exists(fileName))
             {
@@ -35,6 +35,8 @@ namespace BombDefuse
                 }
                 correctAnswers = int.Parse(lines[7]);
                 progressBar1.Value = int.Parse(lines[8]);
+                data.SetMinutes(int.Parse(lines[9]));
+                data.SetSeconds(int.Parse(lines[10]));
                 return lines[6];
             }
             return "";
@@ -48,6 +50,7 @@ namespace BombDefuse
             File.AppendAllText(fileName, currentPokemon);
             File.AppendAllText(fileName, $"\n{correctAnswer}");
             File.AppendAllText(fileName, $"\n{progress}");
+            File.AppendAllText(fileName, $"\n{data.GetMinutes()}\n{data.GetSeconds()}");
         }
 
         public bool checkAnswer(PictureBox pictureBox1, string imageName, string fileName)
