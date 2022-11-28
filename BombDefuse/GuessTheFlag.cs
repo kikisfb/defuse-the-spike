@@ -97,7 +97,26 @@ namespace BombDefuse
         /// </summary>
         public void SaveState()
         {
+            /* Save current state of the game */
+            List<string> strings = new();
+            if(flagsUsed.Count > 0)
+            {
+                strings.Add("Used");
+                foreach (string flag in flagsUsed)
+                {
+                    strings.Add(flag);
+                }
+            }
+            else
+            {
+                strings.Add("Not used");
+            }
 
+            strings.Add(currentFlag);
+            strings.Add(data.GetMinutes().ToString());
+            strings.Add(data.GetSeconds().ToString());
+
+            File.WriteAllLines("gflState.txt", strings);
         }
 
         /// <summary>
@@ -105,7 +124,22 @@ namespace BombDefuse
         /// </summary>
         public void ReadState()
         {
-
+            string filePath = "gflState.txt";
+            if(File.Exists(filePath))
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                int i = 0;
+                if (lines[0] == "Used")
+                {
+                    for (; i < lines.Length - 3; i++)
+                    {
+                        flagsUsed.Add(lines[i]);
+                    }
+                }
+                currentFlag = lines[++i];
+                data.SetMinutes(int.Parse(lines[++i]));
+                data.SetSeconds(int.Parse(lines[++i]));
+            }
         }
 
         /// <summary>

@@ -37,8 +37,7 @@ namespace BombDefuse
             tic = new();
             tic.data.SetId(1);
 
-            var list = new List<Button> { button2, button3, button4, button5, button6, button7, button8, button9, button10 };
-            buttons = list;
+            buttons = new List<Button> { button2, button3, button4, button5, button6, button7, button8, button9, button10 };
         }
 
         private void ChangeButton(Button button, string text, Color color, bool enabled)

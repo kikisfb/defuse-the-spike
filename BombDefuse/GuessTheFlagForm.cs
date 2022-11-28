@@ -81,10 +81,12 @@ namespace BombDefuse
 
             minutes = gfl.data.GetMinutes();
             seconds = gfl.data.GetSeconds();
+            label2.Text = ConvertMinutesSecondsToStr(minutes, seconds);
             timer1.Start();
 
             /* Start with the first flag */
-            gfl.NextFlag(random);
+            if(gfl.GetCurrentFlag() == "")
+                gfl.NextFlag(random);
             SetImageFromFlag(gfl.GetCurrentFlag());
         }
 
@@ -112,7 +114,9 @@ namespace BombDefuse
                         {
                             MessageBox.Show("You have guessed the right flag! Click OK to go back to the main menu.");
                             gfl.data.SetCompletionStatus(true);
+                            File.Delete("gflState.txt");
                             closeForm();
+                            return;
                         }
                         else
                         {
@@ -130,7 +134,9 @@ namespace BombDefuse
             {
                 closeForm();
             }
-            
+
+            gfl.data.SetMinutes(minutes);
+            gfl.data.SetSeconds(seconds);
             gfl.SaveState();
         }
 
