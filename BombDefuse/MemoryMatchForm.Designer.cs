@@ -275,6 +275,7 @@
             this.button18.TabIndex = 18;
             this.button18.Text = "How To Play";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // timer1
             // 
@@ -284,7 +285,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(343, 98);
+            this.label2.Location = new System.Drawing.Point(384, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 19;

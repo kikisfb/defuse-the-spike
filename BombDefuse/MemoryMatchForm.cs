@@ -550,6 +550,11 @@ namespace BombDefuse
 
         }
 
+        private void button18_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("How To Play\nClick a button to reveal an image.\nClick another button to reveal another image.\nIf the images are the same, they will stay revealed. If they are not the same, they will hide themselves again.\nFlip all pairs to win the game.");
+        }
+
         private void flipButton()
         {
             if (flippedButton[0] == 1)
