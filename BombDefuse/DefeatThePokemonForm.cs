@@ -118,7 +118,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Congrats, You Completed the Puzzle!");
+                MessageBox.Show("It's Not Very Effective");
             }
            currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
@@ -149,7 +149,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Congrats, You Completed the Puzzle!");
+                MessageBox.Show("It's Not Very Effective");
             }
             currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
@@ -182,7 +182,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Congrats, You Completed the Puzzle!");
+                MessageBox.Show("It's Not Very Effective");
             }
             currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
@@ -212,7 +212,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Congrats, You Completed the Puzzle!");
+                MessageBox.Show("It's Not Very Effective");
             }
             currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
