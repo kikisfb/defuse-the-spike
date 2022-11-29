@@ -33,9 +33,10 @@ namespace BombDefuse
 
             InitializeComponent();
 
-            random = new();
+            random = new(1);
             tic = new();
             tic.data.SetId(1);
+            tic.data.SetActivityStatus(true);
 
             buttons = new List<Button> { button2, button3, button4, button5, button6, button7, button8, button9, button10 };
         }
@@ -238,9 +239,9 @@ namespace BombDefuse
         {
             mainForm.Show();
 
-            // Call the main form load to pass PuzzleData
-
             this.Close();
+
+            mainForm.Form1_Load(tic.data);
         }
 
         private void button_Click(object sender, EventArgs e)

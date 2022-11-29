@@ -16,6 +16,65 @@ namespace BombDefuse
             this.Hide();
         }
 
+        private void changeState(PuzzleData data, Button button)
+        {
+            bool completionStatus = data.GetCompletionStatus();
+            bool activityStatus = data.GetActivityStatus();
+            if(activityStatus)
+            {
+                if(completionStatus)
+                {
+                    button.BackColor = Color.LightGreen;
+                    button.Enabled = false;
+                }
+                else
+                {
+                    button.BackColor = Color.LightYellow;
+                }
+            }
+        }
+        public void Form1_Load(PuzzleData data)
+        {
+            int id = data.GetId();
+            
+            if(id == 1)
+            {
+                changeState(data, TicTacToe);
+            }
+            else if(id == 2)
+            {
+                changeState(data, GuessTheFlag);
+            }
+            else if(id == 3)
+            {
+                changeState(data, MathGeek);
+            }
+            else if(id == 4)
+            {
+                changeState(data, Scramble);
+            }
+            else if(id == 5)
+            {
+                changeState(data, Switches);
+            }
+            else if(id == 6)
+            {
+                changeState(data, Battleship);
+            }
+            else if(id == 7)
+            {
+                changeState(data, DefeatThePokemon);
+            }
+            else if(id == 8)
+            {
+                changeState(data, MemoryMatch);
+            }
+            else
+            {
+                MessageBox.Show("PuzzleData ADT was not sent back correctly.");
+                Application.Exit();
+            }
+        }
 
         private void GuessTheFlag_Click(object sender, EventArgs e)
         {
