@@ -129,14 +129,14 @@ namespace BombDefuse
             {
                 string[] lines = File.ReadAllLines(filePath);
                 int i = 0;
-                if (lines[0] == "Used")
+                if (lines[i++] == "Used")
                 {
                     for (; i < lines.Length - 3; i++)
                     {
                         flagsUsed.Add(lines[i]);
                     }
                 }
-                currentFlag = lines[++i];
+                currentFlag = lines[i];
                 data.SetMinutes(int.Parse(lines[++i]));
                 data.SetSeconds(int.Parse(lines[++i]));
             }

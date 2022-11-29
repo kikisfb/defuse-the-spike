@@ -145,6 +145,7 @@ namespace BombDefuse
             mainForm.Show();
 
             // Call the main form load to pass PuzzleData
+            mainForm.Form1_Load(gfl.data);
 
             this.Close();
         }
