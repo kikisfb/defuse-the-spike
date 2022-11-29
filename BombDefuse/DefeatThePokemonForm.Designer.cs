@@ -48,10 +48,9 @@
             // pictureBox1
             // 
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(316, 135);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(361, 180);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 262);
+            this.pictureBox1.Size = new System.Drawing.Size(438, 349);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -60,10 +59,9 @@
             // 
             this.WaterGun.BackColor = System.Drawing.Color.Blue;
             this.WaterGun.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.WaterGun.Location = new System.Drawing.Point(12, 452);
-            this.WaterGun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.WaterGun.Location = new System.Drawing.Point(14, 603);
             this.WaterGun.Name = "WaterGun";
-            this.WaterGun.Size = new System.Drawing.Size(181, 112);
+            this.WaterGun.Size = new System.Drawing.Size(207, 149);
             this.WaterGun.TabIndex = 1;
             this.WaterGun.Text = "Water Gun";
             this.WaterGun.UseVisualStyleBackColor = false;
@@ -73,10 +71,9 @@
             // 
             this.DragonBreath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.DragonBreath.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DragonBreath.Location = new System.Drawing.Point(269, 452);
-            this.DragonBreath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DragonBreath.Location = new System.Drawing.Point(307, 603);
             this.DragonBreath.Name = "DragonBreath";
-            this.DragonBreath.Size = new System.Drawing.Size(181, 112);
+            this.DragonBreath.Size = new System.Drawing.Size(207, 149);
             this.DragonBreath.TabIndex = 2;
             this.DragonBreath.Text = "Dragon Breath";
             this.DragonBreath.UseVisualStyleBackColor = false;
@@ -87,10 +84,9 @@
             this.Psychic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Psychic.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Psychic.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.Psychic.Location = new System.Drawing.Point(542, 452);
-            this.Psychic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Psychic.Location = new System.Drawing.Point(619, 603);
             this.Psychic.Name = "Psychic";
-            this.Psychic.Size = new System.Drawing.Size(176, 112);
+            this.Psychic.Size = new System.Drawing.Size(201, 149);
             this.Psychic.TabIndex = 3;
             this.Psychic.Text = "Psychic";
             this.Psychic.UseVisualStyleBackColor = false;
@@ -100,10 +96,9 @@
             // 
             this.GrassKnot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.GrassKnot.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GrassKnot.Location = new System.Drawing.Point(797, 452);
-            this.GrassKnot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GrassKnot.Location = new System.Drawing.Point(911, 603);
             this.GrassKnot.Name = "GrassKnot";
-            this.GrassKnot.Size = new System.Drawing.Size(181, 112);
+            this.GrassKnot.Size = new System.Drawing.Size(207, 149);
             this.GrassKnot.TabIndex = 4;
             this.GrassKnot.Text = "Grass Knot";
             this.GrassKnot.UseVisualStyleBackColor = false;
@@ -113,10 +108,9 @@
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Location = new System.Drawing.Point(17, 13);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(19, 17);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 52);
+            this.button5.Size = new System.Drawing.Size(101, 69);
             this.button5.TabIndex = 6;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -125,9 +119,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(223, -3);
+            this.label1.Location = new System.Drawing.Point(255, -4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(543, 60);
+            this.label1.Size = new System.Drawing.Size(676, 74);
             this.label1.TabIndex = 7;
             this.label1.Text = "Defeat The Pokemon";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -135,9 +129,10 @@
             // HowToPlay
             // 
             this.HowToPlay.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HowToPlay.Location = new System.Drawing.Point(847, 42);
+            this.HowToPlay.Location = new System.Drawing.Point(968, 56);
+            this.HowToPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HowToPlay.Name = "HowToPlay";
-            this.HowToPlay.Size = new System.Drawing.Size(122, 76);
+            this.HowToPlay.Size = new System.Drawing.Size(139, 101);
             this.HowToPlay.TabIndex = 8;
             this.HowToPlay.Text = "How To Play";
             this.HowToPlay.UseVisualStyleBackColor = true;
@@ -145,19 +140,20 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(773, 202);
+            this.progressBar1.Location = new System.Drawing.Point(883, 269);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(181, 56);
+            this.progressBar1.Size = new System.Drawing.Size(207, 75);
             this.progressBar1.TabIndex = 9;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 211);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(6, 302);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(279, 47);
+            this.label2.Size = new System.Drawing.Size(319, 54);
             this.label2.TabIndex = 10;
             this.label2.Text = "Correct Answers:";
             // 
@@ -169,17 +165,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(460, 87);
+            this.label3.Location = new System.Drawing.Point(526, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "label3";
             // 
             // DefeatThePokemonForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 575);
+            this.ClientSize = new System.Drawing.Size(1131, 767);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
@@ -191,7 +187,6 @@
             this.Controls.Add(this.DragonBreath);
             this.Controls.Add(this.WaterGun);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DefeatThePokemonForm";
             this.Text = "DefeatThePokemonForm";
             this.Load += new System.EventHandler(this.DefeatThePokemonForm_Load);

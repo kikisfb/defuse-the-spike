@@ -108,9 +108,18 @@ namespace BombDefuse
                 if (flippedButton[0] != 14)
                 {
                     flipButton();
+                    button1.BackgroundImage = Resources.lightgrey;
                     button1.Enabled = true;
-                }                
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if(mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -123,8 +132,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 10)
+                {
+                    flipButton();
+                    button2.BackgroundImage = Resources.lightgrey;
+                    button2.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -137,8 +159,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 11)
+                {
+                    flipButton();
+                    button3.BackgroundImage = Resources.lightgrey;
+                    button3.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -151,8 +186,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 12)
+                {
+                    flipButton();
+                    button4.BackgroundImage = Resources.lightgrey;
+                    button4.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -165,8 +213,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 9)
+                {
+                    flipButton();
+                    button5.BackgroundImage = Resources.lightgrey;
+                    button5.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -179,8 +240,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 15)
+                {
+                    flipButton();
+                    button6.BackgroundImage = Resources.lightgrey;
+                    button6.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -193,8 +267,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 13)
+                {
+                    flipButton();
+                    button7.BackgroundImage = Resources.lightgrey;
+                    button7.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -207,8 +294,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 16)
+                {
+                    flipButton();
+                    button8.BackgroundImage = Resources.lightgrey;
+                    button8.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -221,8 +321,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 5)
+                {
+                    flipButton();
+                    button9.BackgroundImage = Resources.lightgrey;
+                    button9.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -235,8 +348,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 2)
+                {
+                    flipButton();
+                    button10.BackgroundImage = Resources.lightgrey;
+                    button10.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -249,8 +375,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 3)
+                {
+                    flipButton();
+                    button11.BackgroundImage = Resources.lightgrey;
+                    button11.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -263,8 +402,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 4)
+                {
+                    flipButton();
+                    button12.BackgroundImage = Resources.lightgrey;
+                    button12.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -277,8 +429,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 7)
+                {
+                    flipButton();
+                    button13.BackgroundImage = Resources.lightgrey;
+                    button13.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -291,8 +456,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 1)
+                {
+                    flipButton();
+                    button14.BackgroundImage = Resources.lightgrey;
+                    button14.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -305,8 +483,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 6)
+                {
+                    flipButton();
+                    button15.BackgroundImage = Resources.lightgrey;
+                    button15.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -319,8 +510,21 @@ namespace BombDefuse
             if (mm.getTurns() == 2)
             {
                 MessageBox.Show("It made it here");
-                flipButton();
+                if (flippedButton[0] != 8)
+                {
+                    flipButton();
+                    button16.BackgroundImage = Resources.lightgrey;
+                    button16.Enabled = true;
+                }
+                else
+                {
+                    mm.IncrementPairs();
+                }
                 mm.setTurns(0);
+                if (mm.getFlippedPairs() == 8)
+                {
+                    MessageBox.Show("Nice");
+                }
             }
         }
 
@@ -341,71 +545,92 @@ namespace BombDefuse
             label2.Text = minutesSecondsStr;
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void flipButton()
         {
             if (flippedButton[0] == 1)
             {
                 button1.Enabled = true;
+                button1.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 2)
             {
                 button2.Enabled = true;
+                button2.BackgroundImage = Resources.lightgrey; 
             }
             else if (flippedButton[0] == 3)
             {
                 button3.Enabled = true;
+                button3.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 4)
             {
                 button4.Enabled = true;
+                button4.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 5)
             {
                 button5.Enabled = true;
+                button5.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 6)
             {
                 button6.Enabled = true;
+                button6.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 7)
             {
                 button7.Enabled = true;
+                button7.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 8)
             {
                 button8.Enabled = true;
+                button8.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 9)
             {
                 button9.Enabled = true;
+                button9.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 10)
             {
                 button10.Enabled = true;
+                button10.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 11)
             {
                 button11.Enabled = true;
+                button11.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 12)
             {
                 button12.Enabled = true;
+                button12.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 13)
             {
                 button13.Enabled = true;
+                button13.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 14)
             {
                 button14.Enabled = true;
+                button14.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 15)
             {
                 button15.Enabled = true;
+                button15.BackgroundImage = Resources.lightgrey;
             }
             else if (flippedButton[0] == 16)
             {
                 button16.Enabled = true;
+                button16.BackgroundImage = Resources.lightgrey;
             }
         }
 

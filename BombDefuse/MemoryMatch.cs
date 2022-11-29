@@ -52,5 +52,9 @@ namespace BombDefuse
             mm.turns++;
             return mm;
         }
+        public void IncrementPairs()
+        {
+            flippedPairs++;
+        }
     }
 }
