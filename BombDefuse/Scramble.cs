@@ -22,12 +22,12 @@ namespace BombDefuse
             int numberInArray = random.Next(words.Length);
             pickedWord = words[numberInArray];
             string File;
-          //  if (numberInArray == 0)
+            if (numberInArray == 0)
                 File = Resources.TradeWordCombinations;
-          //  else if (numberInArray == 1)
-           //     File = Resources.LeadsWordCombinations;
-          //  else
-            //    File = Resources.TearsWordCombinations;
+            else if (numberInArray == 1)
+                File = Resources.LeadsWordCombinations;
+            else
+                File = Resources.TearsWordCombinations;
 
             WinningWords = File.Split("\r\n");
         }
@@ -46,6 +46,10 @@ namespace BombDefuse
         public string getWord()
         {
             return pickedWord;
+        }
+        public string[] getWinningWords()
+        {
+            return WinningWords;
         }
     }
 }

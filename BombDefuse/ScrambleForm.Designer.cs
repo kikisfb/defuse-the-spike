@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScrambleForm));
             this.checkButton = new System.Windows.Forms.Button();
             this.ChecktTextBox = new System.Windows.Forms.TextBox();
@@ -37,6 +38,9 @@
             this.buttonT = new System.Windows.Forms.Button();
             this.buttonD = new System.Windows.Forms.Button();
             this.buttonE = new System.Windows.Forms.Button();
+            this.GoBackButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkButton
@@ -64,7 +68,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Gabriola", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(77, 35);
+            this.label1.Location = new System.Drawing.Point(75, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 50);
             this.label1.TabIndex = 13;
@@ -77,7 +81,6 @@
             this.buttonR.Name = "buttonR";
             this.buttonR.Size = new System.Drawing.Size(53, 56);
             this.buttonR.TabIndex = 12;
-            this.buttonR.Text = "R";
             this.buttonR.UseVisualStyleBackColor = false;
             this.buttonR.Click += new System.EventHandler(this.buttonR_Click);
             // 
@@ -88,7 +91,6 @@
             this.buttonA.Name = "buttonA";
             this.buttonA.Size = new System.Drawing.Size(53, 56);
             this.buttonA.TabIndex = 11;
-            this.buttonA.Text = "A";
             this.buttonA.UseVisualStyleBackColor = false;
             this.buttonA.Click += new System.EventHandler(this.buttonA_Click);
             // 
@@ -99,7 +101,6 @@
             this.buttonT.Name = "buttonT";
             this.buttonT.Size = new System.Drawing.Size(53, 56);
             this.buttonT.TabIndex = 10;
-            this.buttonT.Text = "T";
             this.buttonT.UseVisualStyleBackColor = false;
             this.buttonT.Click += new System.EventHandler(this.buttonT_Click);
             // 
@@ -110,7 +111,6 @@
             this.buttonD.Name = "buttonD";
             this.buttonD.Size = new System.Drawing.Size(53, 56);
             this.buttonD.TabIndex = 9;
-            this.buttonD.Text = "D";
             this.buttonD.UseVisualStyleBackColor = false;
             this.buttonD.Click += new System.EventHandler(this.buttonD_Click);
             // 
@@ -121,9 +121,35 @@
             this.buttonE.Name = "buttonE";
             this.buttonE.Size = new System.Drawing.Size(53, 56);
             this.buttonE.TabIndex = 8;
-            this.buttonE.Text = "E";
             this.buttonE.UseVisualStyleBackColor = false;
             this.buttonE.Click += new System.EventHandler(this.buttonE_Click);
+            // 
+            // GoBackButton
+            // 
+            this.GoBackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GoBackButton.BackgroundImage")));
+            this.GoBackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GoBackButton.Location = new System.Drawing.Point(1, 3);
+            this.GoBackButton.Name = "GoBackButton";
+            this.GoBackButton.Size = new System.Drawing.Size(52, 48);
+            this.GoBackButton.TabIndex = 16;
+            this.GoBackButton.UseVisualStyleBackColor = true;
+            this.GoBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(106, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 25);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
             // 
             // ScrambleForm
             // 
@@ -131,6 +157,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(513, 343);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.GoBackButton);
             this.Controls.Add(this.checkButton);
             this.Controls.Add(this.ChecktTextBox);
             this.Controls.Add(this.label1);
@@ -157,5 +185,8 @@
         private Button buttonT;
         private Button buttonD;
         private Button buttonE;
+        private Button GoBackButton;
+        private System.Windows.Forms.Timer timer1;
+        private Label label2;
     }
 }

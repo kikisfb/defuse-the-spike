@@ -13,13 +13,14 @@ namespace BombDefuse
     public partial class MathGeekForm : Form
     {
         private MathGeek mathg;
+        private int seconds, minutes;
         public MathGeekForm()
         {
             InitializeComponent();
         }
 
-        private Form? mainForm;
-        public MathGeekForm(Form callingForm)
+        private Form1? mainForm;
+        public MathGeekForm(Form1 callingForm)
         {
             this.mainForm = callingForm;
 
@@ -29,7 +30,10 @@ namespace BombDefuse
         }
         private void MathGeekForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Math Geek is working!");
+            minutes = 0;
+            seconds = 0;
+            timer1.Start();
+            label1.Text = "00 minutes :: 00 seconds elapsed";
             labelequation.Text = mathg.getEquation();
         }
 
@@ -64,6 +68,46 @@ namespace BombDefuse
         private void equationLabel_Click(object sender, EventArgs e)
         {
 
+        }
+        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
+        {
+            string displaySeconds;
+            string displayMinutes;
+
+            // converts minutes and seconds to a user-friendly format
+            if (seconds < 10)
+            {
+                displaySeconds = $"{0}{seconds}";
+            }
+            else
+                displaySeconds = $"{seconds}";
+
+            if (minutes < 10)
+            {
+                displayMinutes = $"{0}{minutes}";
+            }
+            else
+            {
+                displayMinutes = $"{minutes}";
+            }
+
+            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (seconds < 60)
+            {
+                seconds++;
+            }
+            else
+            {
+                seconds = 0;
+                minutes++;
+            }
+
+            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
+
+            label1.Text = minutesSecondsStr;
         }
     }
 }
