@@ -47,11 +47,6 @@ namespace BombDefuse
 
         }
 
-        public bool checkButtonStatus(Button button)
-        {
-            return true;
-        }
-
         public static MemoryMatch operator ++(MemoryMatch mm)
         {
             mm.turns++;
