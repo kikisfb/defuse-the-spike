@@ -33,7 +33,7 @@ namespace BombDefuse
 
             InitializeComponent();
 
-            random = new(1);
+            random = new();
             tic = new();
             tic.data.SetId(1);
             tic.data.SetActivityStatus(true);
