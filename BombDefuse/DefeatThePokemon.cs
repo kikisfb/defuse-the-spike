@@ -23,7 +23,7 @@ namespace BombDefuse
 
         public string LoadFromFile(ProgressBar progressBar1)
         {
-            string fileName = "SaveFile.txt";
+            string fileName = "SaveFileDTP.txt";
             string[] lines = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "};
 
             if (File.Exists(fileName))
@@ -44,7 +44,7 @@ namespace BombDefuse
 
         public void WriteToFile(string currentPokemon, int progress)
         {
-            string fileName = "SaveFile.txt";            
+            string fileName = "SaveFileDTP.txt";            
             string correctAnswer = Convert.ToString(correctAnswers);
             File.WriteAllLines(fileName, usedPokemon);
             File.AppendAllText(fileName, currentPokemon);

@@ -101,15 +101,15 @@ namespace BombDefuse
             bool correct2 = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping2);
             if (correct || correct2)
             {
-                MessageBox.Show("Super Effective");
+                MessageBox.Show("It's Super Effective!");
                 dtf++;
                 progressBar1.Value += 25;
                 progressBar1.Update();
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
-                    MessageBox.Show("Nice");
-                    File.Delete("SaveFile.txt");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
                 }
@@ -118,7 +118,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Incorrect");
+                MessageBox.Show("Congrats, You Completed the Puzzle!");
             }
            currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
@@ -132,15 +132,15 @@ namespace BombDefuse
             bool correct = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping);
             if (correct)
             {
-                MessageBox.Show("Super Effective");
+                MessageBox.Show("It's Super Effective!");
                 dtf++;
                 progressBar1.Value += 25;
                 progressBar1.Update();
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
-                    MessageBox.Show("Nice");
-                    File.Delete("SaveFile.txt");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
                 }
@@ -149,7 +149,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Incorrect");
+                MessageBox.Show("Congrats, You Completed the Puzzle!");
             }
             currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
@@ -165,15 +165,15 @@ namespace BombDefuse
             bool correct2 = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping2);
             if (correct || correct2)
             {
-                MessageBox.Show("Super Effective");
+                MessageBox.Show("It's Super Effective!");
                 dtf++;
                 progressBar1.Value += 25;
                 progressBar1.Update();
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
-                    MessageBox.Show("Nice");
-                    File.Delete("SaveFile.txt");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
                 }
@@ -182,7 +182,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Incorrect");
+                MessageBox.Show("Congrats, You Completed the Puzzle!");
             }
             currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }
@@ -196,15 +196,15 @@ namespace BombDefuse
             bool correct = dtf.checkAnswer(pictureBox1, currentPokemon, correctTyping);
             if (correct)
             {
-                MessageBox.Show("Super Effective");
+                MessageBox.Show("It's Super Effective!");
                 dtf++;
                 progressBar1.Value += 25;
                 progressBar1.Update();
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
-                    MessageBox.Show("Nice");
-                    File.Delete("SaveFile.txt");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
                 }
@@ -212,7 +212,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("Incorrect");
+                MessageBox.Show("Congrats, You Completed the Puzzle!");
             }
             currentPokemon = dtf.checkUsedPokemon(currentPokemon, pictureBox1, randomPokemon);
         }

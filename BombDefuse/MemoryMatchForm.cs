@@ -19,6 +19,7 @@ namespace BombDefuse
         private int minutes, seconds;
         private MemoryMatch mm;
         private int[] flippedButton = new int[2];
+        private bool[] flippedButtonsAtLoad = new bool[16];
         public MemoryMatchForm()
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace BombDefuse
             minutes = 0;
             seconds = 0;
             timer1.Start();
-            label2.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            
 
             button1.BackgroundImage = Resources.lightgrey;
             button2.BackgroundImage = Resources.lightgrey;
@@ -59,6 +60,91 @@ namespace BombDefuse
             button14.BackgroundImage = Resources.lightgrey;
             button15.BackgroundImage = Resources.lightgrey;
             button16.BackgroundImage = Resources.lightgrey;
+
+            flippedButtonsAtLoad = mm.ReadFromFile();
+            minutes = mm.data.GetMinutes();
+            seconds = mm.data.GetSeconds();
+            label2.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            if (flippedButtonsAtLoad[0] == true)
+            {
+                button1.BackgroundImage = Resources.Cole_Ellishill;
+                button1.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[1] == true)
+            {
+                button2.BackgroundImage = Resources.SleepStair;
+                button2.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[2] == true)
+            {
+                button3.BackgroundImage = Resources.haloSleep;
+                button3.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[3] == true)
+            {
+                button4.BackgroundImage = Resources.Kiana;
+                button4.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[4] == true)
+            {
+                button5.BackgroundImage = Resources.Ty;
+                button5.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[5] == true)
+            {
+                button6.BackgroundImage = Resources.KK;
+                button6.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[6] == true)
+            {
+                button7.BackgroundImage = Resources.Ethan;
+                button7.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[7] == true)
+            {
+                button8.BackgroundImage = Resources.Omar;
+                button8.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[8] == true)
+            {
+                button9.BackgroundImage = Resources.Ty;
+                button9.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[9] == true)
+            {
+                button10.BackgroundImage = Resources.SleepStair;
+                button10.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[10] == true)
+            {
+                button11.BackgroundImage = Resources.haloSleep;
+                button11.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[11] == true)
+            {
+                button12.BackgroundImage = Resources.Kiana;
+                button12.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[12] == true)
+            {
+                button13.BackgroundImage = Resources.Ethan;
+                button13.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[13] == true)
+            {
+                button14.BackgroundImage = Resources.Cole_Ellishill;
+                button14.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[14] == true)
+            {
+                button15.BackgroundImage = Resources.KK;
+                button15.Enabled = false;
+            }
+            if (flippedButtonsAtLoad[15] == true)
+            {
+                button16.BackgroundImage = Resources.Omar;
+                button16.Enabled = false;
+            }
         }
 
         private string ConvertMinutesSecondsToStr(int minutes, int seconds)
@@ -88,9 +174,9 @@ namespace BombDefuse
 
         private void button17_Click(object sender, EventArgs e)
         {
-            //mm.data.SetMinutes(minutes);
-           // mm.data.SetSeconds(seconds);
-            //mm.SaveToFile();
+            mm.data.SetMinutes(minutes);
+            mm.data.SetSeconds(seconds);
+            mm.SaveToFile(flippedButtonsAtLoad);
             //mainForm.Form1_Load(dtf.data);
             this.Close();
             mainForm.Show();
@@ -114,11 +200,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[0] = true;
+                    flippedButtonsAtLoad[13] = true;
                 }
                 mm.setTurns(0);
                 if(mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -141,11 +232,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[1] = true;
+                    flippedButtonsAtLoad[9] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -168,11 +264,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[2] = true;
+                    flippedButtonsAtLoad[10] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -195,11 +296,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[3] = true;
+                    flippedButtonsAtLoad[11] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -222,11 +328,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[4] = true;
+                    flippedButtonsAtLoad[8] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -249,11 +360,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[5] = true;
+                    flippedButtonsAtLoad[14] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -276,11 +392,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[6] = true;
+                    flippedButtonsAtLoad[12] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -303,11 +424,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[7] = true;
+                    flippedButtonsAtLoad[15] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -330,11 +456,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[8] = true;
+                    flippedButtonsAtLoad[4] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -357,11 +488,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[9] = true;
+                    flippedButtonsAtLoad[1] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -384,11 +520,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[10] = true;
+                    flippedButtonsAtLoad[2] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -411,11 +552,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[11] = true;
+                    flippedButtonsAtLoad[3] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -438,11 +584,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[12] = true;
+                    flippedButtonsAtLoad[6] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -465,11 +616,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[13] = true;
+                    flippedButtonsAtLoad[0] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -492,11 +648,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[14] = true;
+                    flippedButtonsAtLoad[5] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -519,11 +680,16 @@ namespace BombDefuse
                 else
                 {
                     mm.IncrementPairs();
+                    flippedButtonsAtLoad[15] = true;
+                    flippedButtonsAtLoad[7] = true;
                 }
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
-                    MessageBox.Show("Nice");
+                    MessageBox.Show("Congrats, You Completed the Puzzle!");
+                    File.Delete("SaveFileMM.txt");
+                    this.Close();
+                    mainForm.Show();
                 }
             }
         }
@@ -638,6 +804,5 @@ namespace BombDefuse
                 button16.BackgroundImage = Resources.lightgrey;
             }
         }
-
     }
 }
