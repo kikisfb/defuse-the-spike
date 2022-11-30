@@ -58,7 +58,6 @@
             this.AnswerTextBox.Name = "AnswerTextBox";
             this.AnswerTextBox.Size = new System.Drawing.Size(225, 112);
             this.AnswerTextBox.TabIndex = 3;
-            this.AnswerTextBox.TextChanged += new System.EventHandler(this.AnswerTextBox_TextChanged);
             // 
             // CheckButton
             // 
@@ -83,7 +82,7 @@
             this.label2.Size = new System.Drawing.Size(338, 84);
             this.label2.TabIndex = 2;
             this.label2.Text = "Answer the equation \r\nin the text box below";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // equationLabel
             // 
@@ -94,7 +93,7 @@
             this.equationLabel.Name = "equationLabel";
             this.equationLabel.Size = new System.Drawing.Size(0, 51);
             this.equationLabel.TabIndex = 1;
-            this.equationLabel.Click += new System.EventHandler(this.equationLabel_Click);
+            
             // 
             // labelequation
             // 

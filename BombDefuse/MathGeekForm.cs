@@ -26,35 +26,37 @@ namespace BombDefuse
 
             InitializeComponent();
             mathg = new();
+            mathg.data.SetId(3);
             
         }
         private void MathGeekForm_Load(object sender, EventArgs e)
         {
-            string[] isOpened=File.ReadAllLines("equationsSaved.txt");
-            if(isOpened.Length > 0 )
-            {
-                labelequation.Text = isOpened[0];
-                ;
-            }
-            else
-            {
-                minutes = 0;
-                seconds = 0;
-                timer1.Start();
-                label1.Text = "00 minutes :: 00 seconds elapsed";
-                labelequation.Text = mathg.getEquation();
-            }
+            minutes = 0;
+            seconds =0;
+           
+            timer1.Start();
+            label1.Text = "00 minutes :: 00 seconds elapsed";
             
-        }
+            labelequation.Text = mathg.getEquation();
+            string isOpened = mathg.readEquationFile();
+            minutes=mathg.data.GetMinutes();
+            seconds=mathg.data.GetSeconds();
+            label1.Text = ConvertMinutesSecondsToStr(minutes, seconds);
 
-        private void AnswerTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
+            mathg.data.SetActivityStatus(true);
+            if(isOpened!=" ")
+            {
+                labelequation.Text = isOpened;
+            }
         }
+        
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            File.WriteAllTextAsync("equationsSaved.txt", label1.Text);
+            mathg.data.SetMinutes(minutes);
+            mathg.data.SetSeconds(seconds);
+            mathg.SaveFile();
+            
             this.Close();
             mainForm.Show();
         }
@@ -63,6 +65,8 @@ namespace BombDefuse
         {
             if (AnswerTextBox.Text == mathg.getAnswer())
             {
+                mathg.data.SetCompletionStatus(true);
+                File.Delete("equationsSaved.txt");
                 MessageBox.Show("You Won!"); 
                 this.Close();
                 mainForm.Show();
@@ -71,15 +75,7 @@ namespace BombDefuse
                 MessageBox.Show("Try Again");
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void equationLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         private string ConvertMinutesSecondsToStr(int minutes, int seconds)
         {
             string displaySeconds;

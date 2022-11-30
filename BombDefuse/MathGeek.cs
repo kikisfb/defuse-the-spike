@@ -12,7 +12,7 @@ namespace BombDefuse
     {
         private string[] equations;
         private string[] answers;
-        private string currentEquation=" ";
+        private string currentEquation;
         private string currentAnswer;
 
         public MathGeek()
@@ -22,7 +22,28 @@ namespace BombDefuse
             equations = equationFile.Split("\r\n");
             answers = answersFile.Split("\r\n");
             chooseEquation();
-            File.WriteAllTextAsync("equationsSaved.txt", currentEquation);
+        }
+        public void SaveFile()
+        {
+            File.WriteAllText("equationsSaved.txt", currentEquation);
+            File.AppendAllText("equationsSaved.txt", $"\n{currentAnswer}");
+            File.AppendAllText("equationsSaved.txt", $"\n{data.GetMinutes()}\n{data.GetSeconds()}");
+        }
+        public string readEquationFile()
+        {
+            string[] line = {" "," "," "," "};
+
+            if(File.Exists("equationsSaved.txt"))
+            {
+                line = File.ReadAllLines("equationsSaved.txt");
+                currentAnswer = line[1];
+                currentEquation = line[0];
+                data.SetMinutes(int.Parse(line[2]));
+                data.SetSeconds(int.Parse(line[3]));
+            }
+            
+            return line[0];
+
         }
         private void chooseEquation()
         {
