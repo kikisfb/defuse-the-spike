@@ -208,6 +208,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -243,6 +245,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -278,6 +282,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -313,6 +319,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -348,6 +356,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -383,6 +393,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -418,6 +430,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -453,6 +467,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -488,6 +504,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -523,6 +541,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -558,6 +578,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -593,6 +615,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -628,6 +652,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -663,6 +689,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);
@@ -698,6 +726,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show(); 
                     mm.data.SetCompletionStatus(true);
@@ -733,6 +763,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
+                    mm.data.SetMinutes(minutes);
+                    mm.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     mm.data.SetCompletionStatus(true);

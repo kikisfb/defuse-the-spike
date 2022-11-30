@@ -4,14 +4,27 @@ namespace BombDefuse
     {
         private int minutes, seconds;
         private int avgMinutes, avgSeconds;
+        private bool[] bools;
+        private double curr;
+        private int countPuzzlesSolved;
         public Form1()
         {
             InitializeComponent();
 
+            // Initialization of members
+            bools = new bool[9];
+            countPuzzlesSolved = 0;
             minutes = 7;
             seconds = 0;
 
             label3.Text = ConvertMinutesSecondsToStr(minutes, seconds) + "left";
+            if (File.Exists("curr.txt"))
+            {
+                string[] lines = File.ReadAllLines("curr.txt");
+                curr = Convert.ToDouble(lines[0]);
+            }
+            else
+                curr = 0.0;
 
             timer1.Start();
         }
@@ -27,25 +40,86 @@ namespace BombDefuse
 
         private void changeState(PuzzleData data, Button button)
         {
+            int id = data.GetId();
             bool completionStatus = data.GetCompletionStatus();
             bool activityStatus = data.GetActivityStatus();
+            int change;
             if(activityStatus)
             {
+
                 if(completionStatus)
                 {
+                    if (bools[id - 1])
+                    {
+                        if (progressBar1.Value == 87)
+                            change = 13;
+                        else
+                            change = 9;
+                    }         
+                    else
+                    {
+                        if (progressBar1.Value == 84)
+                            change = 16;
+                        else
+                            change = 12;
+                    }
+
+                    // Disable the button and turn its status to green (completed)
                     button.BackColor = Color.LightGreen;
                     button.Enabled = false;
-                    if (progressBar1.Value == 84)
-                        progressBar1.Value += 16;
+
+                    // Calculate average puzzle completion time and display it in the GUI
+                    countPuzzlesSolved++;
+                    int s = data.GetSeconds();
+
+                    string sStr;
+                    if (s >= 10)
+                    {
+                        sStr = s.ToString();
+                    }
                     else
-                        progressBar1.Value += 12;
+                    {
+                        sStr = $"0{s}";
+                    }
+                   
+                    double another = Convert.ToDouble($"{data.GetMinutes()}.{sStr}");
+                    curr += another;
+                    double displayCurr = curr / countPuzzlesSolved;
+                    displayCurr = (double)Math.Round(displayCurr * 100) / 100;
+                    string displayCurrStr = displayCurr.ToString();
+                    int indexOfSeparator = displayCurrStr.IndexOf('.');
+                    avgMinutes = int.Parse(displayCurrStr.Substring(0, indexOfSeparator));
+                    avgSeconds = int.Parse(displayCurrStr.Substring(indexOfSeparator + 1));
+
+                    while(avgSeconds >= 60)
+                    {
+                        avgMinutes++;
+                        avgSeconds -= 60;
+
+                        if (!(avgSeconds > 0))
+                            avgSeconds = 0;
+                    }
+
+                    label5.Text = ConvertMinutesSecondsToStr(avgMinutes, avgSeconds);
+                    File.WriteAllText("curr.txt", displayCurrStr);
                 }
                 else
                 {
-                    button.BackColor = Color.LightYellow;
+                    if (bools[id - 1])
+                        change = 0;
+                    else
+                    {
+                        bools[id - 1] = true;
+                        change = 3;
+                    }
+
+                    button.BackColor = Color.LightYellow;   
                 }
+    
+                progressBar1.Value += change;
             }
         }
+
         public void Form1_Load(PuzzleData data)
         {
             int id = data.GetId();
@@ -84,7 +158,7 @@ namespace BombDefuse
             }
             else
             {
-                MessageBox.Show("PuzzleData ADT was not sent back correctly.");
+                MessageBox.Show("PuzzleData ADT was not sent back correctly. Exiting...");
                 Application.Exit();
             }
         }
@@ -169,6 +243,17 @@ namespace BombDefuse
 
             return $"{displayMinutes} minutes : {displaySeconds} seconds ";
         }
+
+        private static double ConvertMinSecStrToDouble(string minSecStr)
+        {
+            string minutes = minSecStr.Substring(0, minSecStr.IndexOf(' '));
+            string seconds = minSecStr.Substring(minSecStr.IndexOf(":") + 2, minSecStr.IndexOf(" "));
+
+            double d = Convert.ToDouble($"{minutes}.{seconds}");
+            d = (double)Math.Round(d * 100) / 100;
+            return d;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if(minutes == 0 && seconds == 0)

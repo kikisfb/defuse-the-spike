@@ -113,6 +113,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
+                    dtf.data.SetMinutes(minutes);
+                    dtf.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     dtf.data.SetCompletionStatus(true);
@@ -146,6 +148,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
+                    dtf.data.SetMinutes(minutes);
+                    dtf.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     dtf.data.SetCompletionStatus(true);
@@ -181,6 +185,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
+                    dtf.data.SetMinutes(minutes);
+                    dtf.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     dtf.data.SetCompletionStatus(true);
@@ -214,6 +220,8 @@ namespace BombDefuse
                 {
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
+                    dtf.data.SetMinutes(minutes);
+                    dtf.data.SetSeconds(seconds);
                     this.Close();
                     mainForm.Show();
                     dtf.data.SetCompletionStatus(true);

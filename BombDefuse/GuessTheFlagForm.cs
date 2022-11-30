@@ -135,8 +135,6 @@ namespace BombDefuse
                 closeForm();
             }
 
-            gfl.data.SetMinutes(minutes);
-            gfl.data.SetSeconds(seconds);
             gfl.SaveState();
         }
 
@@ -145,6 +143,8 @@ namespace BombDefuse
             mainForm.Show();
 
             // Call the main form load to pass PuzzleData
+            gfl.data.SetMinutes(minutes);
+            gfl.data.SetSeconds(seconds);
             mainForm.Form1_Load(gfl.data);
 
             this.Close();

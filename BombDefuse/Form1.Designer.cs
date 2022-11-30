@@ -43,6 +43,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TicTacToe
@@ -175,17 +176,27 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(506, 32);
+            this.label4.Location = new System.Drawing.Point(539, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 15);
             this.label4.TabIndex = 12;
             this.label4.Text = "Average completion time:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(543, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 15);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "00 minutes : 00 seconds";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 338);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.progressBar1);
@@ -223,5 +234,6 @@
         private ProgressBar progressBar1;
         private Label label3;
         private Label label4;
+        private Label label5;
     }
 }
