@@ -176,11 +176,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(539, 32);
+            this.label4.Location = new System.Drawing.Point(520, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 15);
+            this.label4.Size = new System.Drawing.Size(180, 15);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Average completion time:";
+            this.label4.Text = "Average puzzle completion time:";
             // 
             // label5
             // 
