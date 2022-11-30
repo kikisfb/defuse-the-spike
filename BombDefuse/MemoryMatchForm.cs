@@ -33,16 +33,15 @@ namespace BombDefuse
             InitializeComponent();
 
             mm = new();
-            
+
+            mm.data.SetActivityStatus(true);
+            mm.data.SetId(8);
         }
         private void MemoryMatchForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Memory Match is working!");
-
             minutes = 0;
             seconds = 0;
-            timer1.Start();
-            
+            timer1.Start();            
 
             button1.BackgroundImage = Resources.lightgrey;
             button2.BackgroundImage = Resources.lightgrey;
@@ -177,9 +176,9 @@ namespace BombDefuse
             mm.data.SetMinutes(minutes);
             mm.data.SetSeconds(seconds);
             mm.SaveToFile(flippedButtonsAtLoad);
-            //mainForm.Form1_Load(dtf.data);
             this.Close();
             mainForm.Show();
+            mainForm.Form1_Load(mm.data);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -211,6 +210,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -244,6 +245,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -277,6 +280,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -310,6 +315,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -343,6 +350,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -376,6 +385,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -409,6 +420,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -442,6 +455,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -475,6 +490,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -508,6 +525,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -541,6 +560,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -574,6 +595,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -607,6 +630,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -640,6 +665,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -672,7 +699,9 @@ namespace BombDefuse
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     this.Close();
-                    mainForm.Show();
+                    mainForm.Show(); 
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }
@@ -706,6 +735,8 @@ namespace BombDefuse
                     File.Delete("SaveFileMM.txt");
                     this.Close();
                     mainForm.Show();
+                    mm.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(mm.data);
                 }
             }
         }

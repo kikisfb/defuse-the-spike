@@ -29,10 +29,13 @@ namespace BombDefuse
             InitializeComponent();
 
             dtf = new();
+
+            dtf.data.SetActivityStatus(true);
+            dtf.data.SetId(7);
         }
         private void DefeatThePokemonForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Defeat the Pokémon is working!");
+            
             minutes = 0;
             seconds = 0;
             timer1.Start();
@@ -85,9 +88,9 @@ namespace BombDefuse
             dtf.data.SetMinutes(minutes);
             dtf.data.SetSeconds(seconds);
             dtf.WriteToFile(currentPokemon, progressBar1.Value);
-            //mainForm.Form1_Load(dtf.data);
             this.Close();
             mainForm.Show();
+            mainForm.Form1_Load(dtf.data);
         }
 
         private void WaterGun_Click(object sender, EventArgs e)
@@ -112,6 +115,8 @@ namespace BombDefuse
                     File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
+                    dtf.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(dtf.data);
                 }
                 dtf.addPokemon(currentPokemon);
                 
@@ -143,6 +148,8 @@ namespace BombDefuse
                     File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
+                    dtf.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(dtf.data);
                 }
                 dtf.addPokemon(currentPokemon);
                 
@@ -176,6 +183,8 @@ namespace BombDefuse
                     File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
+                    dtf.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(dtf.data);
                 }
                 dtf.addPokemon(currentPokemon);
                 
@@ -207,6 +216,8 @@ namespace BombDefuse
                     File.Delete("SaveFileDTP.txt");
                     this.Close();
                     mainForm.Show();
+                    dtf.data.SetCompletionStatus(true);
+                    mainForm.Form1_Load(dtf.data);
                 }
                 dtf.addPokemon(currentPokemon);               
             }
