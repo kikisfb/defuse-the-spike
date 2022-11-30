@@ -30,11 +30,21 @@ namespace BombDefuse
         }
         private void MathGeekForm_Load(object sender, EventArgs e)
         {
-            minutes = 0;
-            seconds = 0;
-            timer1.Start();
-            label1.Text = "00 minutes :: 00 seconds elapsed";
-            labelequation.Text = mathg.getEquation();
+            string[] isOpened=File.ReadAllLines("equationsSaved.txt");
+            if(isOpened.Length > 0 )
+            {
+                labelequation.Text = isOpened[0];
+                ;
+            }
+            else
+            {
+                minutes = 0;
+                seconds = 0;
+                timer1.Start();
+                label1.Text = "00 minutes :: 00 seconds elapsed";
+                labelequation.Text = mathg.getEquation();
+            }
+            
         }
 
         private void AnswerTextBox_TextChanged(object sender, EventArgs e)
@@ -44,6 +54,7 @@ namespace BombDefuse
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
+            File.WriteAllTextAsync("equationsSaved.txt", label1.Text);
             this.Close();
             mainForm.Show();
         }
