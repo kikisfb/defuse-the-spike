@@ -65,31 +65,6 @@ namespace BombDefuse
             }
         }
 
-        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
-        {
-            string displaySeconds;
-            string displayMinutes;
-
-            // converts minutes and seconds to a user-friendly format
-            if (seconds < 10)
-            {
-                displaySeconds = $"{0}{seconds}";
-            }
-            else
-                displaySeconds = $"{seconds}";
-
-            if (minutes < 10)
-            {
-                displayMinutes = $"{0}{minutes}";
-            }
-            else
-            {
-                displayMinutes = $"{minutes}";
-            }
-
-            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
-        }
-
         private void TicTacToeForm_Load(object sender, EventArgs e)
         {
             /* Set initial data of the sub-GUI */
@@ -104,7 +79,7 @@ namespace BombDefuse
             seconds = tic.data.GetSeconds();
             if(minutes > 0 || seconds > 0)
             {
-                label2.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+                label2.Text = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
             }
 
             LoadKeysIntoGUI(board);
@@ -292,7 +267,7 @@ namespace BombDefuse
                 minutes++;
             }
 
-            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
+            string minutesSecondsStr = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
 
             label2.Text = minutesSecondsStr;
         }
