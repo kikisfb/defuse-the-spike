@@ -67,6 +67,7 @@ namespace BombDefuse
             {
                 mathg.data.SetCompletionStatus(true);
                 File.Delete("equationsSaved.txt");
+                timer1.Stop();
                 MessageBox.Show("You Won!"); 
                 this.Close();
                 mainForm.Show();

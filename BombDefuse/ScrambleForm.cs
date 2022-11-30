@@ -26,23 +26,30 @@ namespace BombDefuse
 
             InitializeComponent();
             scram = new Scramble();
-            string chosenWord=scram.getWord();
-            string[] winningWords=scram.getWinningWords();
-            buttonE.Text = chosenWord[4].ToString();
-            buttonD.Text = chosenWord[3].ToString();
-            buttonT.Text = chosenWord[0].ToString();
-            buttonA.Text = chosenWord[2].ToString();
-            buttonR.Text = chosenWord[1].ToString();
+            scram.data.SetId(4);
+            
         }
         private void ScrambleForm_Load(object sender, EventArgs e)
         {
             scram.data.SetActivityStatus(true);
             minutes = 0;
             seconds = 0;
-            scram.data.SetId(4);
             timer1.Start();
-            label2.Text = "00 minutes :: 00 seconds elapsed";
 
+            label2.Text = "00 minutes :: 00 seconds elapsed";
+            string chosenWord=scram.getWord();
+            string[] winningWords=scram.getWinningWords();
+            
+            string isOpened = scram.readFile();
+            minutes = scram.data.GetMinutes();
+            seconds = scram.data.GetSeconds();
+            label1.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            ;
+            buttonE.Text = chosenWord[4].ToString();
+            buttonD.Text = chosenWord[3].ToString();
+            buttonT.Text = chosenWord[0].ToString();
+            buttonA.Text = chosenWord[2].ToString();
+            buttonR.Text = chosenWord[1].ToString();
         }
         private void closeForm()
         {
@@ -55,9 +62,11 @@ namespace BombDefuse
         private void checkButton_Click(object sender, EventArgs e)
         {   
             bool result = scram.checkGuess(ChecktTextBox.Text.ToUpper());
-            scram.data.SetCompletionStatus(true);
+            
             if (result == true)
             {
+                scram.data.SetCompletionStatus(true);
+                File.Delete("wordSaved.txt");
                 MessageBox.Show("You Won");
                 this.Close();
                 mainForm.Show();
@@ -96,6 +105,9 @@ namespace BombDefuse
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
+            scram.data.SetMinutes(minutes);
+            scram.data.SetSeconds(seconds);
+            scram.SaveFile();
             this.Close();
             mainForm.Show();
         }
