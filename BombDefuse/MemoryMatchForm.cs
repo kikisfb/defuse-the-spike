@@ -206,6 +206,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if(mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -243,6 +244,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -280,6 +282,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -317,6 +320,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -354,6 +358,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -391,6 +396,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -428,6 +434,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -465,6 +472,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -502,6 +510,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -539,6 +548,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -576,6 +586,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -613,6 +624,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -650,6 +662,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -687,6 +700,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -724,6 +738,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);
@@ -761,6 +776,7 @@ namespace BombDefuse
                 mm.setTurns(0);
                 if (mm.getFlippedPairs() == 8)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileMM.txt");
                     mm.data.SetMinutes(minutes);

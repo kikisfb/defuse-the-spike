@@ -111,6 +111,7 @@ namespace BombDefuse
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
                     dtf.data.SetMinutes(minutes);
@@ -146,6 +147,7 @@ namespace BombDefuse
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
                     dtf.data.SetMinutes(minutes);
@@ -183,6 +185,7 @@ namespace BombDefuse
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
                     dtf.data.SetMinutes(minutes);
@@ -218,6 +221,7 @@ namespace BombDefuse
                 label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
                 if (dtf.getCorrectAnswers() == 4)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congrats, You Completed the Puzzle!");
                     File.Delete("SaveFileDTP.txt");
                     dtf.data.SetMinutes(minutes);

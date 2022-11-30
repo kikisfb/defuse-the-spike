@@ -45,8 +45,6 @@ namespace BombDefuse
             string[] buttonStateString = convertBoolToString(buttonStates);
             File.WriteAllLines(fileName, buttonStateString);
             File.AppendAllText(fileName, flippedPair);
-            //File.AppendAllText(fileName, $"\n{correctAnswer}");
-            //File.AppendAllText(fileName, $"\n{progress}");
             File.AppendAllText(fileName, $"\n{data.GetMinutes()}\n{data.GetSeconds()}");
         }
 
