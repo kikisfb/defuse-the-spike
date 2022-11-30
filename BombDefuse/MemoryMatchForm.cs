@@ -190,9 +190,10 @@ namespace BombDefuse
             button1.Enabled = false;
             if(mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 14)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button1.BackgroundImage = Resources.lightgrey;
                     button1.Enabled = true;
@@ -222,9 +223,10 @@ namespace BombDefuse
             button2.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 10)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button2.BackgroundImage = Resources.lightgrey;
                     button2.Enabled = true;
@@ -254,9 +256,10 @@ namespace BombDefuse
             button3.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 11)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button3.BackgroundImage = Resources.lightgrey;
                     button3.Enabled = true;
@@ -286,9 +289,10 @@ namespace BombDefuse
             button4.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 12)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button4.BackgroundImage = Resources.lightgrey;
                     button4.Enabled = true;
@@ -318,9 +322,10 @@ namespace BombDefuse
             button5.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 9)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button5.BackgroundImage = Resources.lightgrey;
                     button5.Enabled = true;
@@ -350,9 +355,10 @@ namespace BombDefuse
             button6.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 15)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button6.BackgroundImage = Resources.lightgrey;
                     button6.Enabled = true;
@@ -382,9 +388,10 @@ namespace BombDefuse
             button7.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 13)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button7.BackgroundImage = Resources.lightgrey;
                     button7.Enabled = true;
@@ -414,9 +421,10 @@ namespace BombDefuse
             button8.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 16)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button8.BackgroundImage = Resources.lightgrey;
                     button8.Enabled = true;
@@ -446,9 +454,10 @@ namespace BombDefuse
             button9.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 5)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button9.BackgroundImage = Resources.lightgrey;
                     button9.Enabled = true;
@@ -478,9 +487,10 @@ namespace BombDefuse
             button10.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 2)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button10.BackgroundImage = Resources.lightgrey;
                     button10.Enabled = true;
@@ -510,9 +520,10 @@ namespace BombDefuse
             button11.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 3)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button11.BackgroundImage = Resources.lightgrey;
                     button11.Enabled = true;
@@ -542,9 +553,10 @@ namespace BombDefuse
             button12.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 4)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button12.BackgroundImage = Resources.lightgrey;
                     button12.Enabled = true;
@@ -574,9 +586,10 @@ namespace BombDefuse
             button13.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 7)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button13.BackgroundImage = Resources.lightgrey;
                     button13.Enabled = true;
@@ -606,9 +619,10 @@ namespace BombDefuse
             button14.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 1)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button14.BackgroundImage = Resources.lightgrey;
                     button14.Enabled = true;
@@ -638,9 +652,10 @@ namespace BombDefuse
             button15.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 6)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button15.BackgroundImage = Resources.lightgrey;
                     button15.Enabled = true;
@@ -670,9 +685,10 @@ namespace BombDefuse
             button16.Enabled = false;
             if (mm.getTurns() == 2)
             {
-                MessageBox.Show("It made it here");
+                
                 if (flippedButton[0] != 8)
                 {
+                    MessageBox.Show("Try Again");
                     flipButton();
                     button16.BackgroundImage = Resources.lightgrey;
                     button16.Enabled = true;
