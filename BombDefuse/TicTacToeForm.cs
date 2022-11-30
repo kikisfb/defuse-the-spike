@@ -142,6 +142,7 @@ namespace BombDefuse
                 Key k = s.GetKey();
                 if(k == Key.PLAYER)
                 {
+                    timer1.Stop();
                     MessageBox.Show("Congratulations! You have beaten the AI. Click OK to go back to the main menu.");
                     check = 1;
                 }
@@ -157,6 +158,7 @@ namespace BombDefuse
                 int stuck = tic.stats.GetAmountStuck() + 1;
                 if(stuck == MAX_STUCK)
                 {
+                    timer1.Stop();
                     MessageBox.Show("The game got stuck for the third time. You win by default! Click OK to go back to the main menu.");
                     check = 1;
                     tic.stats.SetStatus(Status.WINNER);

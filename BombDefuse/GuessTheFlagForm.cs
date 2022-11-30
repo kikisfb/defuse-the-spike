@@ -112,6 +112,7 @@ namespace BombDefuse
                         bool guessIsCorrect = gfl.FlagMatches(textBox1.Text);
                         if (guessIsCorrect)
                         {
+                            timer1.Stop();
                             MessageBox.Show("You have guessed the right flag! Click OK to go back to the main menu.");
                             gfl.data.SetCompletionStatus(true);
                             File.Delete("gflState.txt");
