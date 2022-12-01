@@ -126,7 +126,7 @@ namespace BombDefuse
                         change = 3;
                     }
 
-                    button.BackColor = Color.LightYellow;   
+                    button.BackColor = Color.Yellow;   
                 }
     
                 progressBar1.Value += change;

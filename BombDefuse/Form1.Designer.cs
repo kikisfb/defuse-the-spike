@@ -61,6 +61,7 @@
             // 
             // GuessTheFlag
             // 
+            this.GuessTheFlag.BackColor = System.Drawing.SystemColors.Control;
             this.GuessTheFlag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.GuessTheFlag.Location = new System.Drawing.Point(107, 212);
             this.GuessTheFlag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -68,7 +69,7 @@
             this.GuessTheFlag.Size = new System.Drawing.Size(155, 46);
             this.GuessTheFlag.TabIndex = 1;
             this.GuessTheFlag.Text = "Guess The Flag";
-            this.GuessTheFlag.UseVisualStyleBackColor = true;
+            this.GuessTheFlag.UseVisualStyleBackColor = false;
             this.GuessTheFlag.Click += new System.EventHandler(this.GuessTheFlag_Click);
             // 
             // MathGeek
