@@ -12,6 +12,16 @@ namespace BombDefuse
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Difficulty());
+            File.Delete("SaveFileSwitches.txt");
+            File.Delete("SaveFileBattleship.txt");
+            File.Delete("ticState.txt");
+            File.Delete("ticKeys.txt");
+            File.Delete("gflState.txt");
+            File.Delete("SaveFileDTP.txt");
+            File.Delete("SaveFileMM.txt");
+            File.Delete("equationsSaved.txt");
+            File.Delete("wordSaved.txt");
+            File.Delete("curr.txt");
         }
     }
 }

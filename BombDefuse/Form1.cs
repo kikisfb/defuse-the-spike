@@ -130,6 +130,12 @@ namespace BombDefuse
                 }
     
                 progressBar1.Value += change;
+                if(progressBar1.Value == 100)
+                {
+                    timer1.Stop();
+                    MessageBox.Show("You have defused the spike! Click OK to claim your Bomb Defusal Certificate");
+                    Application.Exit();
+                }
             }
         }
 

@@ -96,6 +96,7 @@ namespace BombDefuse
 
             if(thisButton.Name == "check")
             {
+                textBox1.Text = textBox1.Text.Trim(new char[] { '\r', '\n'});
                 Validation validation = gfl.TakeInput(textBox1.Text);
                 if(validation == Validation.EMPTY)
                 {
@@ -151,6 +152,13 @@ namespace BombDefuse
             this.Close();
         }
 
+        private void EnterKeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                button_Click(check, e);
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (seconds < 60)
