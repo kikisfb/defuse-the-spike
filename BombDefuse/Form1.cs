@@ -7,14 +7,27 @@ namespace BombDefuse
         private bool[] bools;
         private double curr;
         private int countPuzzlesSolved;
-        public Form1()
+
+        private Difficulty? difficultyForm;
+        public Form1(Difficulty? difficultyForm, Button sender)
         {
+            this.difficultyForm = difficultyForm;
             InitializeComponent();
+
+            if (sender.Name == "button2")
+            {
+                minutes = 15;
+            }
+            else if (sender.Name == "button3")
+            {
+                minutes = 8;
+            }
+            else
+                minutes = 4;
 
             // Initialization of members
             bools = new bool[9];
             countPuzzlesSolved = 0;
-            minutes = 7;
             seconds = 0;
 
             label3.Text = ConvertMinutesSecondsToStr(minutes, seconds) + "left";

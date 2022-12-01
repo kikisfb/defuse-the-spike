@@ -43,10 +43,10 @@
             // 
             this.goBack.BackgroundImage = global::BombDefuse.Properties.Resources._44927;
             this.goBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.goBack.Location = new System.Drawing.Point(12, 12);
+            this.goBack.Location = new System.Drawing.Point(12, 11);
             this.goBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.goBack.Name = "goBack";
-            this.goBack.Size = new System.Drawing.Size(66, 59);
+            this.goBack.Size = new System.Drawing.Size(66, 52);
             this.goBack.TabIndex = 3;
             this.goBack.UseVisualStyleBackColor = true;
             this.goBack.Click += new System.EventHandler(this.button_Click);
@@ -57,7 +57,7 @@
             this.label1.BackColor = System.Drawing.Color.Green;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Ivory;
-            this.label1.Location = new System.Drawing.Point(147, 18);
+            this.label1.Location = new System.Drawing.Point(147, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(491, 47);
             this.label1.TabIndex = 4;
@@ -66,17 +66,17 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(428, 162);
+            this.textBox1.Location = new System.Drawing.Point(428, 143);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 84);
+            this.textBox1.Size = new System.Drawing.Size(237, 75);
             this.textBox1.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(269, 86);
+            this.label2.Location = new System.Drawing.Point(269, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(243, 23);
             this.label2.TabIndex = 6;
@@ -86,9 +86,9 @@
             // 
             this.check.BackColor = System.Drawing.Color.LightGreen;
             this.check.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.check.Location = new System.Drawing.Point(488, 264);
+            this.check.Location = new System.Drawing.Point(488, 233);
             this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(107, 48);
+            this.check.Size = new System.Drawing.Size(107, 42);
             this.check.TabIndex = 7;
             this.check.Text = "Check";
             this.check.UseVisualStyleBackColor = false;
@@ -97,9 +97,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(98, 135);
+            this.pictureBox1.Location = new System.Drawing.Point(98, 119);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 177);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 156);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.WaitOnLoad = true;
@@ -111,11 +111,11 @@
             // 
             // GuessTheFlagForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BombDefuse.Properties.Resources.maxresdefault;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(764, 335);
+            this.ClientSize = new System.Drawing.Size(764, 296);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.check);
             this.Controls.Add(this.label2);
