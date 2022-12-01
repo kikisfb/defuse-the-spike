@@ -37,13 +37,16 @@ namespace BombDefuse
             timer1.Start();
 
             label2.Text = "00 minutes :: 00 seconds elapsed";
-            string chosenWord=scram.getWord();
-            string[] winningWords=scram.getWinningWords();
+            string chosenWord;
             
-            string isOpened = scram.readFile();
+            string isLoaded = scram.readFile();
+            
+            
+            chosenWord = scram.getWord();
+               
             minutes = scram.data.GetMinutes();
             seconds = scram.data.GetSeconds();
-            label1.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            label2.Text = ConvertMinutesSecondsToStr(minutes, seconds);
             ;
             buttonE.Text = chosenWord[4].ToString();
             buttonD.Text = chosenWord[3].ToString();
@@ -67,6 +70,7 @@ namespace BombDefuse
             {
                 scram.data.SetCompletionStatus(true);
                 File.Delete("wordSaved.txt");
+                timer1.Stop();
                 MessageBox.Show("You Won");
                 this.Close();
                 mainForm.Show();

@@ -53,6 +53,7 @@
             // 
             // AnswerTextBox
             // 
+            this.AnswerTextBox.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AnswerTextBox.Location = new System.Drawing.Point(148, 275);
             this.AnswerTextBox.Multiline = true;
             this.AnswerTextBox.Name = "AnswerTextBox";
@@ -62,8 +63,8 @@
             // CheckButton
             // 
             this.CheckButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.CheckButton.Font = new System.Drawing.Font("PMingLiU-ExtB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckButton.Location = new System.Drawing.Point(216, 407);
+            this.CheckButton.Font = new System.Drawing.Font("PMingLiU-ExtB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CheckButton.Location = new System.Drawing.Point(215, 407);
             this.CheckButton.Name = "CheckButton";
             this.CheckButton.Size = new System.Drawing.Size(82, 25);
             this.CheckButton.TabIndex = 4;
@@ -82,7 +83,6 @@
             this.label2.Size = new System.Drawing.Size(338, 84);
             this.label2.TabIndex = 2;
             this.label2.Text = "Answer the equation \r\nin the text box below";
-            
             // 
             // equationLabel
             // 
@@ -93,7 +93,6 @@
             this.equationLabel.Name = "equationLabel";
             this.equationLabel.Size = new System.Drawing.Size(0, 51);
             this.equationLabel.TabIndex = 1;
-            
             // 
             // labelequation
             // 

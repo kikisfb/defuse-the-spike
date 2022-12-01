@@ -37,46 +37,30 @@ namespace BombDefuse
         {
             File.WriteAllText("wordSaved.txt", pickedWord);
             File.AppendAllText("wordSaved.txt", $"\n{data.GetMinutes()}\n{data.GetSeconds()}");
-            for(int i = 0; i < WinningWords.Length; i++)
-            {
-                File.AppendAllText("wordSaved.txt", $"\n{WinningWords[i]}");
-            }
-            
-            
+
         }
         public string readFile()
         {
-            string[] line;
-            if (pickedWord == "TRADE")
-            {
-                line = new string[9] { " ", " ", " ", " ", " ", " ", " ", " ", " " };
-            }
-            else if(pickedWord=="LEADS")
-            {
-                line = new string[9] { " ", " ", " ", " ", " ", " ", " ", " ", " " };
-
-            }
-            else
-            {
-                line = new string[16] { " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " };
-
-            }
-
+            string[] line = {" "};
+           
             if (File.Exists("wordSaved.txt"))
             {
-                line = File.ReadAllLines("wordSaved.txt");
+                 line = File.ReadAllLines("wordSaved.txt");
+                
                 pickedWord = line[0];
+                
                 data.SetMinutes(int.Parse(line[1]));
                 data.SetSeconds(int.Parse(line[2]));
-                int linenum = 3;
-                for (int i = 0; linenum<line.Length; i++)
-                {
-                    if (line[linenum]!=" ")
-                    {
-                        WinningWords[i] = line[linenum];
-                    }
-                    linenum++;
-                }
+                string Files;
+                if (pickedWord == "TRADE")
+                    Files = Resources.TradeWordCombinations;
+                else if (pickedWord == "LEADS")
+                    Files = Resources.LeadsWordCombinations;
+                else
+                    Files = Resources.TearsWordCombinations;
+
+                WinningWords = Files.Split("\r\n");
+
             }
 
             return line[0];

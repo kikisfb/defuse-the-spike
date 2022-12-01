@@ -56,6 +56,7 @@
             // 
             // ChecktTextBox
             // 
+            this.ChecktTextBox.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ChecktTextBox.Location = new System.Drawing.Point(121, 200);
             this.ChecktTextBox.Multiline = true;
             this.ChecktTextBox.Name = "ChecktTextBox";
