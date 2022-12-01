@@ -341,6 +341,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -357,6 +358,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -377,6 +379,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -393,6 +396,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -413,6 +417,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -429,6 +434,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -449,6 +455,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -465,6 +472,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -485,6 +493,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();
@@ -501,6 +510,7 @@ namespace BombDefuse
 
                 if (states[0] == states[5] && states[1] == states[6] && states[2] == states[7] && states[3] == states[8] && states[4] == states[9])
                 {
+                    timer1.Stop();
                     MessageBox.Show("Puzzle Complete!");
                     File.Delete("SaveFileSwitches.txt");
                     this.Close();

@@ -348,6 +348,7 @@ namespace BombDefuse
             bat--;
             label4.Text = bat.getTurns().ToString();
 
+            timer1.Stop();
             MessageBox.Show("You sunk my battleship!");
             File.Delete("SaveFileBattleship.txt");
             this.Close();
