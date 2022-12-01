@@ -148,7 +148,7 @@ namespace BombDefuse
                 }
                 else
                 {
-                    MessageBox.Show("Oh no! The AI has beaten you. Click OK to try again.");
+                    MessageBox.Show("Oh no! The AI won!. Click OK to try again.");
                     check = 0;
                 }
             }
