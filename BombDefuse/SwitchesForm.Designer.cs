@@ -68,7 +68,7 @@
             this.tglColor.BackgroundImage = global::BombDefuse.Properties.Resources.btnRed;
             this.tglColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tglColor.FlatAppearance.BorderSize = 0;
-            this.tglColor.Location = new System.Drawing.Point(246, 125);
+            this.tglColor.Location = new System.Drawing.Point(522, 145);
             this.tglColor.Name = "tglColor";
             this.tglColor.Size = new System.Drawing.Size(75, 36);
             this.tglColor.TabIndex = 0;
@@ -96,7 +96,7 @@
             this.tglColor2.BackgroundImage = global::BombDefuse.Properties.Resources.btnRed;
             this.tglColor2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tglColor2.FlatAppearance.BorderSize = 0;
-            this.tglColor2.Location = new System.Drawing.Point(370, 125);
+            this.tglColor2.Location = new System.Drawing.Point(182, 230);
             this.tglColor2.Name = "tglColor2";
             this.tglColor2.Size = new System.Drawing.Size(75, 36);
             this.tglColor2.TabIndex = 3;
@@ -108,7 +108,7 @@
             this.tglColor3.BackgroundImage = global::BombDefuse.Properties.Resources.btnRed;
             this.tglColor3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tglColor3.FlatAppearance.BorderSize = 0;
-            this.tglColor3.Location = new System.Drawing.Point(174, 205);
+            this.tglColor3.Location = new System.Drawing.Point(309, 158);
             this.tglColor3.Name = "tglColor3";
             this.tglColor3.Size = new System.Drawing.Size(75, 36);
             this.tglColor3.TabIndex = 4;
@@ -136,7 +136,7 @@
             this.tglColor4.BackgroundImage = global::BombDefuse.Properties.Resources.btnRed;
             this.tglColor4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tglColor4.FlatAppearance.BorderSize = 0;
-            this.tglColor4.Location = new System.Drawing.Point(309, 205);
+            this.tglColor4.Location = new System.Drawing.Point(145, 132);
             this.tglColor4.Name = "tglColor4";
             this.tglColor4.Size = new System.Drawing.Size(75, 36);
             this.tglColor4.TabIndex = 7;
@@ -156,7 +156,7 @@
             this.tglColor5.BackgroundImage = global::BombDefuse.Properties.Resources.btnRed;
             this.tglColor5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tglColor5.FlatAppearance.BorderSize = 0;
-            this.tglColor5.Location = new System.Drawing.Point(441, 205);
+            this.tglColor5.Location = new System.Drawing.Point(423, 215);
             this.tglColor5.Name = "tglColor5";
             this.tglColor5.Size = new System.Drawing.Size(75, 36);
             this.tglColor5.TabIndex = 9;
