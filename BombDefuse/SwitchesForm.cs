@@ -24,8 +24,8 @@ namespace BombDefuse
             InitializeComponent();
         }
 
-        private Form? mainForm;
-        public SwitchesForm(Form callingForm)
+        private Form1? mainForm;
+        public SwitchesForm(Form1 callingForm)
         {
             this.mainForm = callingForm;
 
@@ -346,7 +346,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
             else
@@ -362,7 +362,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
         }
@@ -382,7 +382,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
             else
@@ -398,7 +398,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
         }
@@ -418,7 +418,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
             else
@@ -434,7 +434,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
         }
@@ -454,7 +454,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
             else
@@ -470,7 +470,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
         }
@@ -490,7 +490,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
             else
@@ -506,7 +506,7 @@ namespace BombDefuse
                     this.Close();
                     mainForm.Show();
                     swi.data.SetCompletionStatus(true);
-                    //mainForm.Form1_Load(swi.data);
+                    mainForm.Form1_Load(swi.data);
                 }
             }
         }
@@ -558,11 +558,11 @@ namespace BombDefuse
         private void ReturnButton_Click(object sender, EventArgs e)
         {
             swi.data.SetMinutes(minutes);
-            swi.data.SetSeconds(minutes);
+            swi.data.SetSeconds(seconds);
             swi.SaveState(states);
             this.Close();
             mainForm.Show();
-            //mainForm.Form1_Load(swi.data);
+            mainForm.Form1_Load(swi.data);
         }
     }
 }

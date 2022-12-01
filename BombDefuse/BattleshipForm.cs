@@ -26,8 +26,8 @@ namespace BombDefuse
             InitializeComponent();
         }
 
-        private Form? mainForm;
-        public BattleshipForm(Form callingForm)
+        private Form1? mainForm;
+        public BattleshipForm(Form1 callingForm)
         {
             this.mainForm = callingForm;
 
@@ -175,7 +175,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -193,7 +193,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -211,7 +211,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -229,7 +229,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -247,7 +247,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -265,7 +265,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -283,7 +283,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -301,7 +301,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -319,7 +319,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -337,7 +337,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -354,7 +354,7 @@ namespace BombDefuse
             mainForm.Show();
             bat.data.SetCompletionStatus(true);
             //this.Show();
-            //mainForm.Form1_Load(bat.data)
+            mainForm.Form1_Load(bat.data);
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -371,7 +371,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -389,7 +389,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -407,7 +407,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -425,7 +425,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -443,7 +443,7 @@ namespace BombDefuse
                 this.Close();
                 //this.Show();
                 mainForm.Show();
-                //mainForm.Form1_Load(bat.data)
+                mainForm.Form1_Load(bat.data);
             }
         }
 
@@ -500,7 +500,7 @@ namespace BombDefuse
             bat.SaveState(battleship);
             this.Close();
             mainForm.Show();
-            //mainForm.Form1_Load(bat.data)
+            mainForm.Form1_Load(bat.data);
         }
     }
 }
