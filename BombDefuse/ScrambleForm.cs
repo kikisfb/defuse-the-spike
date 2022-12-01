@@ -68,11 +68,14 @@ namespace BombDefuse
             
             if (result == true)
             {
+                scram.data.SetMinutes(minutes);
+                scram.data.SetSeconds(seconds);
                 scram.data.SetCompletionStatus(true);
                 File.Delete("wordSaved.txt");
                 timer1.Stop();
                 MessageBox.Show("You Won");
                 this.Close();
+                mainForm.Form1_Load(scram.data);
                 mainForm.Show();
             }
             else
@@ -112,7 +115,10 @@ namespace BombDefuse
             scram.data.SetMinutes(minutes);
             scram.data.SetSeconds(seconds);
             scram.SaveFile();
+
             this.Close();
+            mainForm.Form1_Load(scram.data);
+
             mainForm.Show();
         }
         private string ConvertMinutesSecondsToStr(int minutes, int seconds)
@@ -149,8 +155,8 @@ namespace BombDefuse
             {
                 seconds = 0;
                 minutes++;
+            
             }
-
             string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
 
             label2.Text = minutesSecondsStr;

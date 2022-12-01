@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,19 +54,22 @@ namespace BombDefuse
             mathg.data.SetMinutes(minutes);
             mathg.data.SetSeconds(seconds);
             mathg.SaveFile();
-            
             this.Close();
+            mainForm.Form1_Load(mathg.data);
             mainForm.Show();
         }
         private void CheckButton_Click(object sender, EventArgs e)
         {
             if (AnswerTextBox.Text == mathg.getAnswer())
             {
+                mathg.data.SetSeconds(seconds);
+                mathg.data.SetMinutes(minutes);
                 mathg.data.SetCompletionStatus(true);
                 File.Delete("equationsSaved.txt");
                 timer1.Stop();
                 MessageBox.Show("You Won!"); 
                 this.Close();
+                mainForm.Form1_Load(mathg.data);
                 mainForm.Show();
             }
             else
