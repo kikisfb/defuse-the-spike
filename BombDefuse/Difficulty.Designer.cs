@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Difficulty));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,29 +39,34 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(50, 156);
+            this.button1.Location = new System.Drawing.Point(55, 177);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 87);
+            this.button1.Size = new System.Drawing.Size(184, 99);
             this.button1.TabIndex = 0;
             this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 115);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(40, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 15);
+            this.label1.Size = new System.Drawing.Size(221, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Defuse the Spike";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(313, 231);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(313, 262);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 49);
+            this.button2.Size = new System.Drawing.Size(160, 56);
             this.button2.TabIndex = 2;
             this.button2.Text = "Easy (15 minutes)";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,38 +74,45 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(313, 156);
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(313, 177);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 49);
+            this.button3.Size = new System.Drawing.Size(160, 56);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Medium (8 minutes)";
+            this.button3.Text = "Medium (7 minutes)";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(313, 81);
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.Location = new System.Drawing.Point(313, 92);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 49);
+            this.button4.Size = new System.Drawing.Size(160, 56);
             this.button4.TabIndex = 4;
             this.button4.Text = "Hard (4 minutes)";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(332, 48);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(285, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 15);
+            this.label2.Size = new System.Drawing.Size(219, 30);
             this.label2.TabIndex = 5;
             this.label2.Text = "Select a difficulty level";
             // 
             // Difficulty
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 307);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(535, 386);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

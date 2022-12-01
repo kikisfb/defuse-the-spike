@@ -40,7 +40,7 @@ namespace BombDefuse
             if(button.Name == "button2" || button.Name == "button3" || button.Name == "button4")
             {
                 resetButtons();
-                button.BackColor = Color.LightSteelBlue;
+                button.BackColor = Color.DarkTurquoise;
                 button.Enabled = false;
             }
             else

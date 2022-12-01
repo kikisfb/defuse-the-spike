@@ -20,7 +20,7 @@ namespace BombDefuse
             }
             else if (sender.Name == "button3")
             {
-                minutes = 8;
+                minutes = 7;
             }
             else
                 minutes = 4;
