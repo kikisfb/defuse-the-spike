@@ -29,6 +29,7 @@
                 
     There are any number of "resheader" rows that contain simple 
     name/value pairs.
+    
     Each data row contains a name, and value. The row also contains a 
     type or mimetype. Type corresponds to a .NET class that support 
     text/value conversion through the TypeConverter architecture. 
@@ -117,130 +118,145 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Battleship - Hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Battleship - Hit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Battleship - MIss" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Battleship - MIss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Battleship - Grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Battleship - Grid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LeadsWordCombinations" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LeadsWordCombinations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="mathGeekAnswers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mathGeekAnswers.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="mathGeekEquations" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mathGeekEquations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="TearsWordCombinations" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TearsWordCombinations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="TradeWordCombinations" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TradeWordCombinations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="words" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\words.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Dratini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dratini.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Geodude" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Geodude.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Riolu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Riolu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Charmander" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Charmander.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Umbreon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Umbreon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mudkip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mudkip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Back Arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back Arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cole_Ellishill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cole_Ellishill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ethan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ethan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="haloSleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\haloSleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kiana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kiana.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Omar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Omar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SleepStair" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SleepStair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-	<data name="lightgrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\lightgrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-  <data name="australia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\australia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="japan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\japan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="44927" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\44927.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-	<data name="Battleship - MIss1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\Battleship - MIss1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-  <data name="china" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\china.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tic-tac-toe-seamless-background-on-dark-blue-illustration-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tic-tac-toe-seamless-background-on-dark-blue-illustration-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iran" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iran.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\canada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="france" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\france.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\germany.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mexico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mexico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maxresdefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lightgrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lightgrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="brazil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brazil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Umbreon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Umbreon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\canada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Back Arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back Arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TearsWordCombinations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TearsWordCombinations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Riolu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Riolu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cole_Ellishill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cole_Ellishill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TradeWordCombinations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TradeWordCombinations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="btnRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maxresdefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Geodude" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Geodude.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleship - MIss3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - MIss3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleship - Hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - Hit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\australia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SleepStair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SleepStair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="haloSleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\haloSleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\germany.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleship - MIss1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - MIss1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="france" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\france.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="japan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\japan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ethan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ethan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="china" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\china.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dratini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dratini.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleship - Hit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - Hit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mudkip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mudkip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mathGeekAnswers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mathGeekAnswers.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="iran" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iran.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeadsWordCombinations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeadsWordCombinations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Charmander" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Charmander.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleship - Hit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - Hit2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mexico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mexico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mathGeekEquations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mathGeekEquations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Kiana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kiana.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleship - Grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - Grid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Omar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Omar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleship - MIss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - MIss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="words" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\words.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Battleship - MIss2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - MIss2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="44927" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\44927.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tic-tac-toe-seamless-background-on-dark-blue-illustration-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tic-tac-toe-seamless-background-on-dark-blue-illustration-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gflFlags" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gflFlags.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Battleship - Hit3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleship - Hit3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

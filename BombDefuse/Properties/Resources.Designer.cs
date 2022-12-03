@@ -113,6 +113,36 @@ namespace BombDefuse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Battleship___Hit1 {
+            get {
+                object obj = ResourceManager.GetObject("Battleship - Hit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Battleship___Hit2 {
+            get {
+                object obj = ResourceManager.GetObject("Battleship - Hit2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Battleship___Hit3 {
+            get {
+                object obj = ResourceManager.GetObject("Battleship - Hit3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Battleship___MIss {
             get {
                 object obj = ResourceManager.GetObject("Battleship - MIss", resourceCulture);
@@ -126,6 +156,26 @@ namespace BombDefuse.Properties {
         internal static System.Drawing.Bitmap Battleship___MIss1 {
             get {
                 object obj = ResourceManager.GetObject("Battleship - MIss1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Battleship___MIss2 {
+            get {
+                object obj = ResourceManager.GetObject("Battleship - MIss2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Battleship___MIss3 {
+            get {
+                object obj = ResourceManager.GetObject("Battleship - MIss3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,7 +413,7 @@ namespace BombDefuse.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 5*3*1+4/1-2
         ///71+56/7
-        ///slove for x  x+2=5
+        ///solve for x  x+2=5
         ///8/2*(2+2)
         ///576/3
         ///8*32
