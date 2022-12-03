@@ -10,6 +10,10 @@ namespace BombDefuse
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            
+            ApplicationConfiguration.Initialize();
+
+            // Deletes all previous files in case of a past state
             File.Delete("SaveFileSwitches.txt");
             File.Delete("SaveFileBattleship.txt");
             File.Delete("ticState.txt");
@@ -20,10 +24,8 @@ namespace BombDefuse
             File.Delete("equationsSaved.txt");
             File.Delete("wordSaved.txt");
             File.Delete("curr.txt");
-            ApplicationConfiguration.Initialize();
+
             Application.Run(new Difficulty());
-            
-            
         }
     }
 }

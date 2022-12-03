@@ -43,7 +43,7 @@ namespace BombDefuse
             string image = dtf.LoadFromFile(progressBar1);
             minutes = dtf.data.GetMinutes();
             seconds = dtf.data.GetSeconds();
-            label3.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            label3.Text = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
             label2.Text = "Correct Answers: " + $"{dtf.getCorrectAnswers()}";
             if (image == "Charmander")
             {
@@ -254,31 +254,6 @@ namespace BombDefuse
 
         }
 
-        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
-        {
-            string displaySeconds;
-            string displayMinutes;
-
-            // converts minutes and seconds to a user-friendly format
-            if (seconds < 10)
-            {
-                displaySeconds = $"{0}{seconds}";
-            }
-            else
-                displaySeconds = $"{seconds}";
-
-            if (minutes < 10)
-            {
-                displayMinutes = $"{0}{minutes}";
-            }
-            else
-            {
-                displayMinutes = $"{minutes}";
-            }
-
-            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (seconds < 60)
@@ -291,7 +266,7 @@ namespace BombDefuse
                 minutes++;
             }
 
-            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
+            string minutesSecondsStr = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
 
             label3.Text = minutesSecondsStr;
         }

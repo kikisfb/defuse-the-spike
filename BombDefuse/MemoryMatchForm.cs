@@ -63,7 +63,7 @@ namespace BombDefuse
             flippedButtonsAtLoad = mm.ReadFromFile();
             minutes = mm.data.GetMinutes();
             seconds = mm.data.GetSeconds();
-            label2.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            label2.Text = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
             if (flippedButtonsAtLoad[0] == true)
             {
                 button1.BackgroundImage = Resources.Cole_Ellishill;
@@ -144,31 +144,6 @@ namespace BombDefuse
                 button16.BackgroundImage = Resources.Omar;
                 button16.Enabled = false;
             }
-        }
-
-        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
-        {
-            string displaySeconds;
-            string displayMinutes;
-
-            // converts minutes and seconds to a user-friendly format
-            if (seconds < 10)
-            {
-                displaySeconds = $"{0}{seconds}";
-            }
-            else
-                displaySeconds = $"{seconds}";
-
-            if (minutes < 10)
-            {
-                displayMinutes = $"{0}{minutes}";
-            }
-            else
-            {
-                displayMinutes = $"{minutes}";
-            }
-
-            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -801,7 +776,7 @@ namespace BombDefuse
                 minutes++;
             }
 
-            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
+            string minutesSecondsStr = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
 
             label2.Text = minutesSecondsStr;
         }

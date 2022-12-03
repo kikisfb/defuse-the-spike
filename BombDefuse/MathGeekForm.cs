@@ -36,12 +36,12 @@ namespace BombDefuse
             seconds =0;
            
             timer1.Start();
-            label1.Text = "00 minutes :: 00 seconds elapsed";
+            label1.Text = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
             string isOpened = mathg.readEquationFile();
             labelequation.Text = mathg.getEquation();
             minutes=mathg.data.GetMinutes();
             seconds=mathg.data.GetSeconds();
-            label1.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+            label1.Text = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
 
             mathg.data.SetActivityStatus(true);
             if(isOpened!=" ")
@@ -76,30 +76,6 @@ namespace BombDefuse
                 MessageBox.Show("Try Again");
         }
 
-        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
-        {
-            string displaySeconds;
-            string displayMinutes;
-
-            // converts minutes and seconds to a user-friendly format
-            if (seconds < 10)
-            {
-                displaySeconds = $"{0}{seconds}";
-            }
-            else
-                displaySeconds = $"{seconds}";
-
-            if (minutes < 10)
-            {
-                displayMinutes = $"{0}{minutes}";
-            }
-            else
-            {
-                displayMinutes = $"{minutes}";
-            }
-
-            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (seconds < 60)
@@ -111,7 +87,7 @@ namespace BombDefuse
                 seconds = 0;
                 minutes++;
             }
-            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
+            string minutesSecondsStr = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
             label1.Text = minutesSecondsStr;
         }
     }

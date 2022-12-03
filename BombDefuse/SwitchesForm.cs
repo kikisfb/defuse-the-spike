@@ -51,7 +51,7 @@ namespace BombDefuse
 
                 minutes = swi.data.GetMinutes();
                 seconds = swi.data.GetSeconds();
-                label3.Text = ConvertMinutesSecondsToStr(minutes, seconds);
+                label3.Text = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
 
                 if (states[0] == true)
                 {
@@ -520,30 +520,6 @@ namespace BombDefuse
                 }
             }
         }
-        private string ConvertMinutesSecondsToStr(int minutes, int seconds)
-        {
-            string displaySeconds;
-            string displayMinutes;
-
-            // converts minutes and seconds to a user-friendly format
-            if (seconds < 10)
-            {
-                displaySeconds = $"{0}{seconds}";
-            }
-            else
-                displaySeconds = $"{seconds}";
-
-            if (minutes < 10)
-            {
-                displayMinutes = $"{0}{minutes}";
-            }
-            else
-            {
-                displayMinutes = $"{minutes}";
-            }
-
-            return $"{displayMinutes} minutes : {displaySeconds} : seconds elapsed";
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -557,7 +533,7 @@ namespace BombDefuse
                 minutes++;
             }
 
-            string minutesSecondsStr = ConvertMinutesSecondsToStr(minutes, seconds);
+            string minutesSecondsStr = Form1.ConvertMinutesSecondsToStr(minutes, seconds) + "elapsed";
 
             swi.data.SetMinutes(minutes);
             swi.data.SetSeconds(seconds);
