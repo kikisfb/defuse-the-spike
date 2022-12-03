@@ -56,6 +56,8 @@ namespace BombDefuse
 
                 label4.Text = bat.getTurns().ToString();
 
+                RemainingGuessesIndicator(bat.getTurns());
+
                 if (battleship[0] == true)
                 {
                     button1.BackColor = Color.Silver;
@@ -235,6 +237,8 @@ namespace BombDefuse
             button1.BackColor = Color.Silver;
             button1.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             if (bat.getTurns() == 0)
             {
                 MessageBox.Show("Try Again!");
@@ -255,6 +259,8 @@ namespace BombDefuse
 
             button2.BackColor = Color.Silver;
             button2.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -277,6 +283,8 @@ namespace BombDefuse
             button3.BackColor = Color.Silver;
             button3.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             if (bat.getTurns() == 0)
             {
                 MessageBox.Show("Try Again!");
@@ -297,6 +305,8 @@ namespace BombDefuse
 
             button4.BackColor = Color.Silver;
             button4.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -319,6 +329,8 @@ namespace BombDefuse
             button5.BackColor = Color.Silver;
             button5.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             if (bat.getTurns() == 0)
             {
                 MessageBox.Show("Try Again!");
@@ -339,6 +351,8 @@ namespace BombDefuse
 
             button6.BackColor = Color.Silver;
             button6.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -361,6 +375,8 @@ namespace BombDefuse
             button7.BackColor = Color.Silver;
             button7.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             if (bat.getTurns() == 0)
             {
                 MessageBox.Show("Try Again!");
@@ -381,6 +397,8 @@ namespace BombDefuse
 
             button8.BackColor = Color.Silver;
             button8.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -403,6 +421,8 @@ namespace BombDefuse
             button9.BackColor = Color.Silver;
             button9.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             if (bat.getTurns() == 0)
             {
                 MessageBox.Show("Try Again!");
@@ -423,6 +443,8 @@ namespace BombDefuse
 
             button10.BackColor = Color.Silver;
             button10.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -445,6 +467,8 @@ namespace BombDefuse
             button11.BackColor = Color.Silver;
             button11.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             timer1.Stop();
             MessageBox.Show("You sunk my battleship!");
             File.Delete("SaveFileBattleship.txt");
@@ -464,6 +488,8 @@ namespace BombDefuse
 
             button12.BackColor = Color.Silver;
             button12.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -486,6 +512,8 @@ namespace BombDefuse
             button13.BackColor = Color.Silver;
             button13.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             if (bat.getTurns() == 0)
             {
                 MessageBox.Show("Try Again!");
@@ -506,6 +534,8 @@ namespace BombDefuse
 
             button14.BackColor = Color.Silver;
             button14.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -528,6 +558,8 @@ namespace BombDefuse
             button15.BackColor = Color.Silver;
             button15.Enabled = false;
 
+            RemainingGuessesIndicator(bat.getTurns());
+
             if (bat.getTurns() == 0)
             {
                 MessageBox.Show("Try Again!");
@@ -548,6 +580,8 @@ namespace BombDefuse
 
             button16.BackColor = Color.Silver;
             button16.Enabled = false;
+
+            RemainingGuessesIndicator(bat.getTurns());
 
             if (bat.getTurns() == 0)
             {
@@ -614,6 +648,105 @@ namespace BombDefuse
             this.Close();
             mainForm.Show();
             mainForm.Form1_Load(bat.data);
+        }
+
+        public void RemainingGuessesIndicator(int guesses)
+        {
+            if (guesses == 9)
+            {
+                pictureBox2.BackColor = Color.Red;
+            }
+
+            if (guesses == 8)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+            }
+
+            if (guesses == 7)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+            }
+
+            if (guesses == 6)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+                pictureBox5.BackColor = Color.Red;
+            }
+
+            if (guesses == 5)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+                pictureBox5.BackColor = Color.Red;
+                pictureBox6.BackColor = Color.Red;
+            }
+
+            if (guesses == 4)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+                pictureBox5.BackColor = Color.Red;
+                pictureBox6.BackColor = Color.Red;
+                pictureBox7.BackColor = Color.Red;
+            }
+
+            if (guesses == 3)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+                pictureBox5.BackColor = Color.Red;
+                pictureBox6.BackColor = Color.Red;
+                pictureBox7.BackColor = Color.Red;
+                pictureBox8.BackColor = Color.Red;
+            }
+
+            if (guesses == 2)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+                pictureBox5.BackColor = Color.Red;
+                pictureBox6.BackColor = Color.Red;
+                pictureBox7.BackColor = Color.Red;
+                pictureBox8.BackColor = Color.Red;
+                pictureBox9.BackColor = Color.Red;
+            }
+
+            if (guesses == 1)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+                pictureBox5.BackColor = Color.Red;
+                pictureBox6.BackColor = Color.Red;
+                pictureBox7.BackColor = Color.Red;
+                pictureBox8.BackColor = Color.Red;
+                pictureBox9.BackColor = Color.Red;
+                pictureBox10.BackColor = Color.Red;
+            }
+
+            if (guesses == 0)
+            {
+                pictureBox2.BackColor = Color.Red;
+                pictureBox3.BackColor = Color.Red;
+                pictureBox4.BackColor = Color.Red;
+                pictureBox5.BackColor = Color.Red;
+                pictureBox6.BackColor = Color.Red;
+                pictureBox7.BackColor = Color.Red;
+                pictureBox8.BackColor = Color.Red;
+                pictureBox9.BackColor = Color.Red;
+                pictureBox10.BackColor = Color.Red;
+                pictureBox11.BackColor = Color.Red;
+            }
+
         }
     }
 }
