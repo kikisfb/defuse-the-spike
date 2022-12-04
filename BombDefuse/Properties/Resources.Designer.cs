@@ -530,7 +530,7 @@ namespace BombDefuse.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 9TRADE
+        ///   Looks up a localized string similar to TRADE
         ///DATER
         ///DERAT
         ///RATED
