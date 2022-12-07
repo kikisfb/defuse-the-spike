@@ -58,8 +58,17 @@ namespace BombDefuse
             mainForm.Form1_Load(mathg.data);
             mainForm.Show();
         }
+        private void EnterKeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                CheckButton_Click(CheckButton, e);
+            }
+        }
         private void CheckButton_Click(object sender, EventArgs e)
         {
+           AnswerTextBox.Text = AnswerTextBox.Text.Trim(new char[] { '\r', '\n' });
+
             if (AnswerTextBox.Text == mathg.getAnswer())
             {
                 mathg.data.SetSeconds(seconds);

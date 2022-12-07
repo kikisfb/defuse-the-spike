@@ -59,6 +59,8 @@
             this.AnswerTextBox.Name = "AnswerTextBox";
             this.AnswerTextBox.Size = new System.Drawing.Size(225, 112);
             this.AnswerTextBox.TabIndex = 3;
+            this.AnswerTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnterKeyPressed);
+
             // 
             // CheckButton
             // 

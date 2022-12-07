@@ -61,9 +61,17 @@ namespace BombDefuse
             scram.data.SetSeconds(seconds);
             // mainForm.Form1_Load(scram.data);
         }
-
+        private void EnterKeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                checkButton_Click(checkButton, e);
+            }
+        }
         private void checkButton_Click(object sender, EventArgs e)
-        {   
+        {
+            ChecktTextBox.Text = ChecktTextBox.Text.Trim(new char[] { '\r', '\n' });
+
             bool result = scram.checkGuess(ChecktTextBox.Text.ToUpper());
             
             if (result == true)

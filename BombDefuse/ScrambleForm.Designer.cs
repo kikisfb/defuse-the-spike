@@ -62,6 +62,8 @@
             this.ChecktTextBox.Name = "ChecktTextBox";
             this.ChecktTextBox.Size = new System.Drawing.Size(266, 67);
             this.ChecktTextBox.TabIndex = 14;
+            this.ChecktTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnterKeyPressed);
+
             // 
             // label1
             // 
