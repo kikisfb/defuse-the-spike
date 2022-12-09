@@ -228,6 +228,8 @@ namespace BombDefuse
 
             if(index == -1) // go back button clicked
             {
+                tic.data.SetMinutes(minutes);
+                tic.data.SetSeconds(seconds);
                 tic.SaveState(board);
                 closeForm();
             }
@@ -257,7 +259,6 @@ namespace BombDefuse
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             if (seconds < 60)
             {
                 seconds++;
